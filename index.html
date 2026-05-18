@@ -25,21 +25,20 @@ html{scroll-behavior:smooth;}
 body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP','YuGothic',sans-serif;color:var(--text);overflow-x:hidden;background:#fff;line-height:1.6;}
 
 /* HEADER */
-header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(0,0,0,0.08),0 4px 24px rgba(39,160,69,0.08);padding:0 20px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-.header-logo-wrap{display:flex;flex-direction:row;align-items:center;gap:0;min-width:0;overflow:hidden;flex-shrink:1;}
-.header-logo{display:flex;align-items:center;flex-shrink:0;}
-.header-logo img{height:38px;width:auto;display:block;}
-.header-subtitle{font-size:11.5px;font-weight:700;color:var(--green-dark);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-left:12px;margin-left:12px;border-left:2px solid var(--green-mid);line-height:1.3;}
-.header-cta{background:var(--green);color:#fff;border:none;padding:9px 16px;border-radius:50px;font-size:12.5px;font-weight:700;cursor:pointer;transition:all .25s;text-decoration:none;display:inline-flex;align-items:center;gap:6px;box-shadow:0 3px 10px rgba(39,160,69,0.3);white-space:nowrap;flex-shrink:0;}
+header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(0,0,0,0.08),0 4px 24px rgba(39,160,69,0.08);padding:0 20px;height:62px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.header-logo-wrap{display:flex;flex-direction:row;align-items:center;gap:0;min-width:0;overflow:visible;flex-shrink:1;}
+.header-logo{display:none;}
+.header-subtitle{font-size:13px;font-weight:800;color:var(--green-dark);white-space:nowrap;line-height:1.35;letter-spacing:0.2px;}
+.header-cta{background:var(--green);color:#fff;border:none;padding:9px 14px;border-radius:50px;font-size:12px;font-weight:700;cursor:pointer;transition:all .25s;text-decoration:none;display:inline-flex;align-items:center;gap:5px;box-shadow:0 3px 10px rgba(39,160,69,0.3);white-space:nowrap;flex-shrink:0;}
 .header-cta:hover{background:var(--green-dark);transform:translateY(-1px);box-shadow:0 5px 16px rgba(39,160,69,0.35);}
 
 /* HERO */
-.hero{min-height:100svh;position:relative;display:flex;align-items:center;background:#0a1008;overflow:hidden;padding-top:68px;}
+.hero{min-height:100svh;position:relative;display:flex;align-items:center;background:#0a1008;overflow:hidden;padding-top:62px;}
 .hero-slides{position:absolute;inset:0;z-index:0;}
 .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease;}
 .hero-slide.active{opacity:1;}
-.hero-slide img{width:100%;height:100%;object-fit:cover;opacity:0.72;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,0,0,0.62) 0%,rgba(0,0,0,0.25) 55%,rgba(0,0,0,0.08) 100%);z-index:0;}
+.hero-slide img{width:100%;height:100%;object-fit:cover;opacity:1;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,25,12,0.78) 0%,rgba(10,25,12,0.50) 52%,rgba(10,25,12,0.22) 100%);z-index:0;}
 /* Sun ray decoration */
 .hero-sun{position:absolute;top:-60px;right:-60px;width:340px;height:340px;z-index:1;pointer-events:none;opacity:0.18;}
 .hero-sun-rays{animation:sunSpin 28s linear infinite;transform-origin:50% 50%;}
@@ -57,26 +56,26 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,2
 .hero-dots{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:4;display:flex;gap:8px;}
 .hero-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.4);transition:background .4s,width .4s;cursor:pointer;}
 .hero-dot.active{width:24px;border-radius:4px;background:#fff;}
-.hero-inner{position:relative;z-index:2;max-width:1120px;margin:0 auto;width:100%;padding:56px 24px 80px;display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center;}
+.hero-inner{position:relative;z-index:2;max-width:1120px;margin:0 auto;width:100%;padding:48px 24px 72px;display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:center;}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--yellow);color:#1c1c1c;font-size:12px;font-weight:800;padding:6px 16px;border-radius:50px;margin-bottom:22px;letter-spacing:0.3px;animation:fadeUp .55s ease both;box-shadow:0 4px 16px rgba(245,197,32,0.4);}
 .hero-h1{font-size:clamp(28px,5vw,60px);font-weight:900;color:#fff;line-height:1.15;margin-bottom:20px;letter-spacing:-1px;animation:fadeUp .6s .08s ease both;text-shadow:0 3px 28px rgba(0,0,0,0.45);}
 .hero-h1 em{color:var(--yellow);font-style:normal;}
-.hero-period{display:inline-flex;flex-direction:column;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:14px;padding:16px 22px;margin-bottom:28px;animation:fadeUp .6s .16s ease both;backdrop-filter:blur(10px);}
-.hero-period-label{font-size:11px;color:var(--yellow);font-weight:700;letter-spacing:2px;margin-bottom:5px;}
-.hero-period-date{font-size:clamp(14px,2vw,19px);font-weight:800;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,0.3);}
+.hero-period{display:inline-flex;flex-direction:column;background:rgba(27,117,50,0.88);border:none;border-radius:14px;padding:14px 20px;margin-bottom:28px;animation:fadeUp .6s .16s ease both;}
+.hero-period-label{font-size:10px;color:var(--yellow);font-weight:700;letter-spacing:2px;margin-bottom:5px;}
+.hero-period-date{font-size:clamp(14px,2vw,19px);font-weight:800;color:#fff;}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .6s .24s ease both;}
 .btn-yellow{background:var(--yellow);color:#1c1c1c;padding:15px 28px;border-radius:50px;font-size:15px;font-weight:800;text-decoration:none;box-shadow:0 6px 20px rgba(245,197,32,0.45);transition:all .25s;display:inline-flex;align-items:center;gap:8px;letter-spacing:0.3px;}
 .btn-yellow:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(245,197,32,0.55);}
 .btn-outline{background:rgba(255,255,255,0.12);color:#fff;padding:15px 28px;border-radius:50px;font-size:15px;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,0.5);transition:all .25s;display:inline-block;backdrop-filter:blur(6px);}
 .btn-outline:hover{background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.8);}
-.hero-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.2);border-radius:22px;padding:26px;animation:fadeRight .7s .2s ease both;}
-.hero-card-label{font-size:10px;color:rgba(255,255,255,0.7);font-weight:800;letter-spacing:2.5px;margin-bottom:16px;text-transform:uppercase;}
-.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.hero-stat{background:rgba(255,255,255,0.1);border-radius:14px;padding:14px 10px;text-align:center;transition:background .2s;border:1px solid rgba(255,255,255,0.1);}
-.hero-stat:hover{background:rgba(255,255,255,0.18);}
+.hero-card{background:rgba(27,117,50,0.82);border-radius:22px;padding:24px;animation:fadeRight .7s .2s ease both;}
+.hero-card-label{font-size:10px;color:var(--yellow);font-weight:800;letter-spacing:2px;margin-bottom:14px;text-transform:uppercase;}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.hero-stat{background:rgba(255,255,255,0.15);border-radius:12px;padding:14px 10px;text-align:center;transition:background .2s;}
+.hero-stat:hover{background:rgba(255,255,255,0.22);}
 .hero-stat-ico{margin-bottom:8px;display:flex;justify-content:center;}
-.hero-stat-num{font-size:18px;font-weight:900;color:#fff;line-height:1;}
-.hero-stat-lbl{font-size:10px;color:rgba(255,255,255,0.75);margin-top:4px;}
+.hero-stat-num{font-size:17px;font-weight:900;color:#fff;line-height:1;}
+.hero-stat-lbl{font-size:10px;color:rgba(255,255,255,0.85);margin-top:4px;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeRight{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:translateX(0)}}
 
@@ -168,8 +167,9 @@ section{padding:80px 20px;}
 .tab-panel.active{display:block;}
 .course-meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;}
 .course-tag{background:var(--green-light);border:1px solid var(--green-mid);color:var(--green-dark);font-size:12px;font-weight:700;padding:5px 14px;border-radius:20px;}
-.course-include{background:var(--green-light);border-radius:12px;padding:16px 20px;margin-bottom:24px;font-size:14px;color:var(--text-sub);line-height:1.8;}
+.course-include{background:var(--green-light);border-radius:12px;padding:16px 20px;margin-bottom:24px;font-size:14px;color:var(--green-dark);line-height:1.8;font-weight:700;}
 .course-include strong{color:var(--green-dark);font-weight:800;}
+.course-include span{color:var(--green-dark);font-weight:700;}
 .price-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid var(--green-mid);}
 .price-table{width:100%;border-collapse:collapse;font-size:14px;min-width:380px;}
 .price-table thead th{background:var(--green);color:#fff;padding:12px 16px;text-align:center;font-weight:800;}
@@ -332,11 +332,9 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:32px;}
-  .hero-card{display:grid;grid-template-columns:1fr;}
-  .hero-stats{grid-template-columns:repeat(4,1fr);}
+  .hero-inner{grid-template-columns:1fr 280px;gap:20px;padding:40px 16px 68px;}
   .about-grid{grid-template-columns:1fr;}
-  .features-grid{grid-template-columns:1fr;}
+  .features-grid{grid-template-columns:1fr 1fr;}
   .tt-cards{grid-template-columns:1fr;}
   .campaign-grid{grid-template-columns:1fr;}
   .results-grid{grid-template-columns:1fr;}
@@ -349,9 +347,9 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
   .tab-panel{padding:24px 18px;}
 }
 @media(max-width:600px){
-  section{padding:56px 16px;}
-  .hero-inner{padding:36px 16px 72px;grid-template-columns:1fr;}
-  .hero-h1{letter-spacing:-0.5px;}
+  section{padding:52px 16px;}
+  .hero-inner{padding:28px 14px 64px;grid-template-columns:1fr;gap:20px;}
+  .hero-h1{font-size:clamp(24px,7vw,36px);letter-spacing:-0.3px;}
   .hero-stats{grid-template-columns:repeat(2,1fr);}
   .hero-btns{flex-direction:column;}
   .btn-yellow,.btn-outline,.btn-green{justify-content:center;}
@@ -366,17 +364,17 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
   .footer-top{flex-direction:column;}
   .features-grid{grid-template-columns:1fr;}
   .voices-grid{grid-template-columns:1fr;}
-  .header-subtitle{font-size:10px;padding-left:8px;margin-left:8px;}
+  .header-subtitle{font-size:11px;}
   .sec-title{font-size:clamp(20px,5vw,28px);}
-  .principal-inner{gap:32px;}
+  .principal-inner{gap:32px;grid-template-columns:1fr;}
   .contact-title{font-size:clamp(22px,5vw,36px);}
-  .btn-yellow-lg{padding:16px 28px;font-size:14px;}
+  .btn-yellow-lg{padding:16px 24px;font-size:14px;}
   .campaign-grid{grid-template-columns:1fr;}
-  .hero-period{padding:14px 16px;}
+  .hero-period{padding:12px 16px;}
   .hero-period-date{font-size:14px;}
   .tt-scroll-hint{display:block;}
   .hero-float-badge{display:none;}
-  .hero-card{display:none;}
+  .hero-card{order:2;}
 }
 </style>
 </head>
@@ -384,12 +382,9 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
 
 <!-- HEADER -->
 <header>
-  <div class="header-logo-wrap">
-    <a href="https://manabiya-bstudy.netlify.app/" class="header-logo">
-      <img src="assets/logo.png" alt="MANABIYA Bースタディ ロゴ" height="38">
-    </a>
+  <a href="https://manabiya-bstudy.netlify.app/" class="header-logo-wrap" style="text-decoration:none;">
     <span class="header-subtitle">MANABIYA Bースタディ<br>夏期講習専用ページ</span>
-  </div>
+  </a>
   <a href="https://manabiya-bstudy.netlify.app/" class="header-cta">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     教室見学・体験授業申込
@@ -404,6 +399,12 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
     </div>
     <div class="hero-slide">
       <img src="assets/hero2.jpg" alt="授業風景2">
+    </div>
+    <div class="hero-slide">
+      <img src="assets/hero3.jpg" alt="教室入口">
+    </div>
+    <div class="hero-slide">
+      <img src="assets/hero4.jpg" alt="個別指導">
     </div>
   </div>
   <div class="hero-overlay"></div>
@@ -438,6 +439,8 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
   <div class="hero-dots">
     <div class="hero-dot active" onclick="gotoSlide(0)"></div>
     <div class="hero-dot" onclick="gotoSlide(1)"></div>
+    <div class="hero-dot" onclick="gotoSlide(2)"></div>
+    <div class="hero-dot" onclick="gotoSlide(3)"></div>
   </div>
   <div class="hero-inner">
     <div class="hero-left">
@@ -455,11 +458,10 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#1c1c1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#1c1c1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           今すぐ申し込む
         </a>
-        <a href="https://manabiya-bstudy.netlify.app/" class="btn-outline">コースを見る</a>
       </div>
     </div>
     <div class="hero-card">
-      <div class="hero-card-label">MANABIYA Bースタディの特長</div>
+      <div class="hero-card-label">Bースタディの特長</div>
       <div class="hero-stats">
         <div class="hero-stat">
           <div class="hero-stat-ico">
@@ -512,7 +514,7 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
         <div class="sec-eyebrow">ABOUT</div>
         <h2 class="about-catch">自分にピッタリのプランで<br><em>この夏、本気になろう。</em></h2>
         <p class="about-body">
-          MANABIYA Bースタディは、鳥取県倉吉市にある個別指導塾です。<br>
+          Bースタディは、鳥取県倉吉市にある個別指導塾です。<br>
           生徒一人ひとりの学力・目標・生活スタイルに合わせて、最適な学習プランをご提案します。<br><br>
           夏期講習は、苦手科目の克服・定期テスト対策・受験準備まで幅広く対応。自習室は年中無休で利用可能なので、勉強習慣をしっかり身につけることができます。<br><br>
           「もっとやりたかったのに時間が足りなかった」という後悔のない夏にするために、今すぐスタートしましょう。
@@ -547,7 +549,7 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
     <div class="tc">
       <div class="sec-summer-tag">🌞 SUMMER 2026</div>
       <div class="sec-eyebrow">FEATURES</div>
-      <h2 class="sec-title">MANABIYA Bースタディが選ばれる<span class="accent">4つの理由</span></h2>
+      <h2 class="sec-title">Bースタディが選ばれる<span class="accent">4つの理由</span></h2>
       <p class="sec-desc">生徒一人ひとりに向き合う指導方針で、着実に成果を出します。</p>
     </div>
     <div class="features-grid" style="margin-top:52px;">
@@ -712,9 +714,6 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
       <p class="tt-scroll-hint">← 左右にスクロールできます →</p>
     </div>
     <p style="text-align:center;font-size:12px;color:rgba(255,255,255,0.6);margin-top:16px;">🌞 黄色ハイライト行は夏期講習期間中（7/1〜8/31）に追加される時間帯です</p>
-    <div style="text-align:center;margin-top:28px;">
-      <a href="https://manabiya-bstudy.netlify.app/" class="btn-yellow btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#1c1c1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#1c1c1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>教室見学・無料体験授業申込フォーム</a>
-    </div>
   </div>
 </section>
 
@@ -739,7 +738,7 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
           <span class="course-tag">対象：小学1年生〜高校3年生</span>
         </div>
         <div class="course-include">
-          <strong>含まれるもの：</strong>個別指導 4回〜15回 ＋ <strong>自習室使い放題</strong> ＋ <strong>スポット指導アプリ使い放題</strong>
+          <strong>含まれるもの：</strong><strong>個別指導 4回〜15回</strong> ＋ <strong>自習室使い放題</strong> ＋ <strong>スポット指導アプリ使い放題</strong>
         </div>
         <div class="price-wrap">
           <table class="price-table">
@@ -762,9 +761,6 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
             </tbody>
           </table>
         </div>
-        <div class="courses-cta">
-          <a href="https://manabiya-bstudy.netlify.app/" class="btn-green btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>教室見学・無料体験授業申込フォーム</a>
-        </div>
       </div>
 
       <!-- Tab 2 -->
@@ -781,9 +777,6 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
           <div class="self-price-label">高校生（税込）</div>
           <div style="margin-top:16px;font-size:13px;color:var(--text-muted);">自習室を思う存分活用し、自らの意志で学びを深めたい高校生向けのコースです。</div>
         </div>
-        <div class="courses-cta">
-          <a href="https://manabiya-bstudy.netlify.app/" class="btn-green btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>教室見学・無料体験授業申込フォーム</a>
-        </div>
       </div>
 
       <!-- Tab 3 -->
@@ -792,7 +785,7 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
           <span class="course-tag">対象：中学1年生〜高校3年生</span>
         </div>
         <div class="course-include">
-          <strong>含まれるもの：</strong>コーチング 4回〜15回 ＋ <strong>自習室使い放題</strong> ＋ <strong>スポット指導アプリ使い放題</strong>
+          <strong>含まれるもの：</strong><strong>コーチング 4回〜15回</strong> ＋ <strong>自習室使い放題</strong> ＋ <strong>スポット指導アプリ使い放題</strong>
         </div>
         <div class="price-wrap">
           <table class="price-table">
@@ -814,9 +807,6 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
               <tr><td>15回</td><td>¥54,000</td><td>¥61,500</td></tr>
             </tbody>
           </table>
-        </div>
-        <div class="courses-cta">
-          <a href="https://manabiya-bstudy.netlify.app/" class="btn-green btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>教室見学・無料体験授業申込フォーム</a>
         </div>
       </div>
 
@@ -894,9 +884,6 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
         </p>
       </div>
     </div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="https://manabiya-bstudy.netlify.app/" class="btn-green btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>教室見学・無料体験授業申込フォーム</a>
-    </div>
   </div>
 </section>
 
@@ -906,7 +893,7 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
     <div class="tc">
       <div class="sec-eyebrow">RESULTS</div>
       <h2 class="sec-title">直近2年の <span class="accent">合格実績</span></h2>
-      <p class="sec-desc">MANABIYA Bースタディ生の頑張りが、これだけの結果につながっています。</p>
+      <p class="sec-desc">Bースタディ生の頑張りが、これだけの結果につながっています。</p>
     </div>
     <div class="results-grid" style="margin-top:48px;">
       <div class="result-card reveal">
@@ -1005,7 +992,7 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
     <div class="tc">
       <div class="sec-eyebrow">VOICES</div>
       <h2 class="sec-title">合格者の <span class="accent">声</span></h2>
-      <p class="sec-desc">MANABIYA Bースタディで合格を勝ち取った先輩たちのメッセージです。</p>
+      <p class="sec-desc">Bースタディで合格を勝ち取った先輩たちのメッセージです。</p>
     </div>
     <div class="voices-grid" style="margin-top:48px;">
       <div class="voice-card reveal">
@@ -1122,12 +1109,12 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
     </div>
     <div class="principal-inner">
       <div class="principal-photo reveal-left">
-        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80" alt="橋本英武 塾長">
+        <img src="assets/principal.jpg" alt="橋本英武 塾長">
         <div class="principal-photo-badge">橋本 英武 塾長</div>
       </div>
       <div class="reveal-right">
         <div class="principal-name">橋本 英武</div>
-        <div class="principal-role">MANABIYA Bースタディ 塾長</div>
+        <div class="principal-role">Bースタディ 塾長</div>
         <p class="principal-msg">
           「勉強が苦手」「やる気が出ない」「どう勉強したらいいかわからない」——そんな悩みを持つ生徒たちと向き合ってきました。<br><br>
           大切にしているのは、一人ひとりの「今」を見ることです。どんな小さな進歩も認め、自信へと変えていく。その積み重ねが、大きな結果につながると信じています。<br><br>
@@ -1261,16 +1248,13 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
         <div class="faq-a">はい、無料体験授業を実施しています。まずは教室の雰囲気を見ていただき、講師との相性や指導スタイルをご確認ください。お申し込みはフォームから承っております。</div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="https://manabiya-bstudy.netlify.app/" class="btn-green btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>教室見学・無料体験授業申込フォーム</a>
-    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact">
   <div class="container contact-inner reveal">
-    <h2 class="contact-title">この夏、<em>変わりませんか？</em></h2>
+    <h2 class="contact-title">この夏、<em>Bースタディで変わりませんか？</em></h2>
     <p class="contact-sub">まずはお気軽に教室見学・無料体験授業へ。<br>あなたの目標に合ったプランを一緒に考えます。</p>
     <div class="contact-tel">
       <a href="tel:0858271991">0858-27-1991</a>
@@ -1289,7 +1273,10 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-brand">MANABIYA Bースタディ</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <img src="assets/logo.png" alt="ロゴ" style="height:36px;width:36px;object-fit:contain;border-radius:6px;background:#fff;padding:2px;">
+          <div class="footer-brand" style="margin-bottom:0;">MANABIYA Bースタディ</div>
+        </div>
         <div class="footer-addr">
           〒682-0812 鳥取県倉吉市海田西町2丁目95<br>
           TEL: 0858-27-1991<br>
