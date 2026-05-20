@@ -4,700 +4,738 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026 夏期講習のご案内 | MANABIYA Bースタディ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
-  --green: #27a045;
-  --green-dark: #1b7532;
-  --green-deeper: #145a27;
-  --green-light: #edf8f1;
-  --green-mid: #c8eecc;
-  --yellow: #f5c520;
-  --orange: #f06320;
-  --white: #fff;
-  --bg: #f7f9f7;
-  --text: #1c1c1c;
-  --text-sub: #4a4a4a;
-  --text-muted: #6a6a6a;
-  --border: rgba(0,0,0,0.08);
+  --forest:#071c0d; --forest-mid:#0d3b22; --forest-light:#155d36;
+  --green:#16a34a; --green-v:#22c55e; --green-xl:#4ade80;
+  --green-bg:#f0fdf4; --green-mid:#bbf7d0; --green-border:#d1fae5;
+  --gold:#f59e0b; --gold-dark:#d97706; --gold-light:#fef3c7;
+  --ink:#0f172a; --ink-2:#1e293b; --ink-3:#475569; --ink-4:#94a3b8;
+  --surface:#f8fafc; --white:#ffffff; --border:#e2e8f0;
+  --grad-forest:linear-gradient(135deg,#071c0d 0%,#0d3b22 55%,#155d36 100%);
+  --grad-green:linear-gradient(135deg,#16a34a,#22c55e);
+  --grad-gold:linear-gradient(135deg,#f59e0b,#fcd34d);
+  --shadow-sm:0 2px 8px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.04);
+  --shadow-md:0 8px 24px rgba(0,0,0,.1),0 2px 8px rgba(0,0,0,.06);
+  --shadow-lg:0 20px 60px rgba(0,0,0,.12),0 8px 20px rgba(0,0,0,.07);
+  --shadow-xl:0 32px 80px rgba(0,0,0,.15),0 12px 30px rgba(0,0,0,.08);
+  --shadow-green:0 8px 30px rgba(22,163,74,.35);
+  --shadow-gold:0 8px 30px rgba(245,158,11,.4);
+  --ease:cubic-bezier(.4,0,.2,1);
+  --t:.28s;
 }
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Hiragino Kaku Gothic ProN','Hiragino Sans','Noto Sans JP','YuGothic',sans-serif;color:var(--text);overflow-x:hidden;background:#fff;line-height:1.6;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;color:var(--ink);background:var(--white);overflow-x:hidden;line-height:1.65;-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;}
+
+.container{max-width:1160px;margin:0 auto;padding:0 24px;}
+.sec{padding:112px 0;}
+.tc{text-align:center;}
+
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;letter-spacing:.18em;padding:6px 16px;border-radius:9999px;text-transform:uppercase;}
+.badge-green{background:var(--green-bg);color:var(--green);border:1.5px solid var(--green-border);}
+.badge-gold{background:var(--gold-light);color:var(--gold-dark);border:1.5px solid rgba(245,158,11,.3);}
+.badge-white{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);border:1.5px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);}
+
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.28em;color:var(--green);text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.eyebrow::before{content:'';width:28px;height:2px;background:currentColor;border-radius:2px;flex-shrink:0;}
+.tc .eyebrow{justify-content:center;}
+.tc .eyebrow::before,.tc .eyebrow::after{content:'';width:28px;height:2px;background:currentColor;border-radius:2px;flex-shrink:0;}
+
+.sec-title{font-size:clamp(24px,3.5vw,44px);font-weight:900;line-height:1.2;letter-spacing:-.025em;color:var(--ink);margin-bottom:16px;}
+.sec-title .hl{color:var(--green);}
+.sec-lead{font-size:16px;color:var(--ink-3);line-height:1.85;max-width:580px;}
+.tc .sec-lead{margin:0 auto;}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-weight:800;cursor:pointer;border:none;outline:none;text-decoration:none;transition:all var(--t) var(--ease);white-space:nowrap;line-height:1;border-radius:9999px;}
+.btn-primary{background:var(--grad-green);color:#fff;padding:15px 32px;font-size:14px;box-shadow:var(--shadow-green);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(22,163,74,.45);}
+.btn-gold{background:var(--grad-gold);color:var(--ink);padding:15px 32px;font-size:14px;box-shadow:var(--shadow-gold);}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(245,158,11,.55);}
+.btn-gold-lg{background:var(--grad-gold);color:var(--ink);padding:20px 48px;font-size:17px;box-shadow:0 12px 40px rgba(245,158,11,.48);border-radius:9999px;display:inline-flex;align-items:center;gap:12px;font-family:inherit;font-weight:900;transition:all var(--t) var(--ease);}
+.btn-gold-lg:hover{transform:translateY(-4px);box-shadow:0 20px 55px rgba(245,158,11,.58);}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;padding:15px 32px;font-size:14px;border:1.5px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);}
+.btn-ghost:hover{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.7);}
 
 /* HEADER */
-header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(0,0,0,0.08),0 4px 24px rgba(39,160,69,0.08);padding:0 20px;height:62px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
-.header-logo-wrap{display:flex;flex-direction:row;align-items:center;gap:0;min-width:0;overflow:visible;flex-shrink:1;}
-.header-logo{display:none;}
-.header-subtitle{font-size:13px;font-weight:800;color:var(--green-dark);white-space:nowrap;line-height:1.35;letter-spacing:0.2px;}
-.header-cta{background:var(--green);color:#fff;border:none;padding:9px 14px;border-radius:50px;font-size:12px;font-weight:700;cursor:pointer;transition:all .25s;text-decoration:none;display:inline-flex;align-items:center;gap:5px;box-shadow:0 3px 10px rgba(39,160,69,0.3);white-space:nowrap;flex-shrink:0;}
-.header-cta:hover{background:var(--green-dark);transform:translateY(-1px);box-shadow:0 5px 16px rgba(39,160,69,0.35);}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 24px;background:rgba(255,255,255,.97);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(0,0,0,.05);transition:box-shadow var(--t) var(--ease);}
+.site-header.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.1);}
+.hd-brand{display:flex;align-items:center;gap:11px;min-width:0;flex-shrink:1;}
+.hd-logo{width:36px;height:36px;border-radius:10px;object-fit:contain;flex-shrink:0;}
+.hd-name{font-size:12.5px;font-weight:900;color:var(--forest-mid);line-height:1.3;white-space:nowrap;}
+.hd-cta{padding:9px 20px;font-size:12.5px;flex-shrink:0;}
 
 /* HERO */
-.hero{min-height:100svh;position:relative;display:flex;align-items:center;background:#0a1008;overflow:hidden;padding-top:62px;}
-.hero-slides{position:absolute;inset:0;z-index:0;}
-.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease;}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--forest);overflow:hidden;padding-top:64px;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.8s ease;}
 .hero-slide.active{opacity:1;}
-.hero-slide img{width:100%;height:100%;object-fit:cover;opacity:1;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,25,12,0.78) 0%,rgba(10,25,12,0.50) 52%,rgba(10,25,12,0.22) 100%);z-index:0;}
-/* Sun ray decoration */
-.hero-sun{position:absolute;top:-60px;right:-60px;width:340px;height:340px;z-index:1;pointer-events:none;opacity:0.18;}
-.hero-sun-rays{animation:sunSpin 28s linear infinite;transform-origin:50% 50%;}
-@keyframes sunSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-/* Floating labels */
-.hero-floats{position:absolute;inset:0;pointer-events:none;z-index:3;}
-.hero-float-badge{position:absolute;background:rgba(255,255,255,0.92);border-radius:14px;padding:10px 16px;box-shadow:0 8px 28px rgba(0,0,0,0.18);backdrop-filter:blur(8px);animation:floatBadge 5s ease-in-out infinite;}
-.hero-float-badge:nth-child(1){bottom:22%;left:4%;animation-delay:0s;}
-.hero-float-badge:nth-child(2){top:20%;right:4%;animation-delay:2.5s;}
-.hero-float-badge-icon{font-size:16px;margin-bottom:3px;}
-.hero-float-badge-val{font-size:15px;font-weight:900;color:var(--green-dark);line-height:1;}
-.hero-float-badge-sub{font-size:10px;color:var(--text-muted);margin-top:2px;}
-@keyframes floatBadge{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-/* Dots */
-.hero-dots{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:4;display:flex;gap:8px;}
-.hero-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.4);transition:background .4s,width .4s;cursor:pointer;}
-.hero-dot.active{width:24px;border-radius:4px;background:#fff;}
-.hero-inner{position:relative;z-index:2;max-width:1120px;margin:0 auto;width:100%;padding:48px 24px 72px;display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:center;}
-.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--yellow);color:#1c1c1c;font-size:12px;font-weight:800;padding:6px 16px;border-radius:50px;margin-bottom:22px;letter-spacing:0.3px;animation:fadeUp .55s ease both;box-shadow:0 4px 16px rgba(245,197,32,0.4);}
-.hero-h1{font-size:clamp(28px,5vw,60px);font-weight:900;color:#fff;line-height:1.15;margin-bottom:20px;letter-spacing:-1px;animation:fadeUp .6s .08s ease both;text-shadow:0 3px 28px rgba(0,0,0,0.45);}
-.hero-h1 em{color:var(--yellow);font-style:normal;}
-.hero-period{display:inline-flex;flex-direction:column;background:rgba(27,117,50,0.88);border:none;border-radius:14px;padding:14px 20px;margin-bottom:28px;animation:fadeUp .6s .16s ease both;}
-.hero-period-label{font-size:10px;color:var(--yellow);font-weight:700;letter-spacing:2px;margin-bottom:5px;}
-.hero-period-date{font-size:clamp(14px,2vw,19px);font-weight:800;color:#fff;}
+.hero-slide img{width:100%;height:100%;object-fit:cover;}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(108deg,rgba(7,28,13,.92) 0%,rgba(13,59,34,.8) 40%,rgba(21,93,54,.5) 70%,transparent 100%);}
+.hero-overlay-b{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(7,28,13,.65) 0%,transparent 50%);}
+.hero-dot-pattern{position:absolute;inset:0;z-index:1;opacity:.06;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:32px 32px;}
+
+.hero-sun{position:absolute;right:-80px;top:-80px;width:540px;height:540px;z-index:2;pointer-events:none;}
+.hero-sun-glow{position:absolute;inset:60px;background:radial-gradient(circle,rgba(245,158,11,.22) 0%,transparent 70%);animation:sunPulse 4s ease-in-out infinite;}
+@keyframes sunPulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+.hero-sun-rays{animation:sunSpin 44s linear infinite;transform-origin:50% 50%;}
+@keyframes sunSpin{to{transform:rotate(360deg)}}
+
+.hero-float{position:absolute;z-index:4;background:rgba(255,255,255,.96);border-radius:18px;padding:13px 20px;box-shadow:0 14px 44px rgba(0,0,0,.22);backdrop-filter:blur(12px);animation:heroFloat 7s ease-in-out infinite;}
+.hero-float:nth-child(1){bottom:28%;left:4%;animation-delay:0s;}
+.hero-float:nth-child(2){top:22%;right:4%;animation-delay:3.5s;}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.hf-icon{font-size:20px;margin-bottom:4px;}
+.hf-val{font-size:16px;font-weight:900;color:var(--forest-mid);}
+.hf-sub{font-size:11px;color:var(--ink-3);margin-top:2px;}
+
+.hero-pager{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:5;display:flex;align-items:center;gap:8px;}
+.hpg-dot{width:8px;height:8px;border-radius:4px;background:rgba(255,255,255,.4);cursor:pointer;transition:all .4s var(--ease);}
+.hpg-dot.active{width:28px;background:#fff;}
+
+.hero-inner{position:relative;z-index:3;width:100%;max-width:1160px;margin:0 auto;padding:60px 24px 100px;display:grid;grid-template-columns:1fr 370px;gap:44px;align-items:center;}
+.hero-tag{display:inline-flex;align-items:center;gap:7px;background:var(--gold);color:var(--ink);font-size:11.5px;font-weight:900;padding:7px 18px;border-radius:9999px;margin-bottom:28px;box-shadow:0 6px 22px rgba(245,158,11,.48);animation:fadeUp .55s ease both;letter-spacing:.02em;}
+.hero-h1{font-size:clamp(30px,5.5vw,68px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.03em;margin-bottom:28px;text-shadow:0 4px 30px rgba(0,0,0,.45);animation:fadeUp .6s .08s ease both;}
+.hero-h1 em{color:var(--gold);font-style:normal;}
+.hero-h1 .sub{font-size:.52em;font-weight:700;letter-spacing:-.01em;color:rgba(255,255,255,.75);display:block;margin-top:10px;}
+.hero-period{display:inline-flex;flex-direction:column;background:rgba(255,255,255,.1);border-radius:14px;padding:16px 22px;margin-bottom:36px;border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(12px);animation:fadeUp .6s .16s ease both;}
+.hp-label{font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.24em;text-transform:uppercase;margin-bottom:6px;}
+.hp-date{font-size:clamp(14px,1.9vw,18px);font-weight:800;color:#fff;}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .6s .24s ease both;}
-.btn-yellow{background:var(--yellow);color:#1c1c1c;padding:15px 28px;border-radius:50px;font-size:15px;font-weight:800;text-decoration:none;box-shadow:0 6px 20px rgba(245,197,32,0.45);transition:all .25s;display:inline-flex;align-items:center;gap:8px;letter-spacing:0.3px;}
-.btn-yellow:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(245,197,32,0.55);}
-.btn-outline{background:rgba(255,255,255,0.12);color:#fff;padding:15px 28px;border-radius:50px;font-size:15px;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,0.5);transition:all .25s;display:inline-block;backdrop-filter:blur(6px);}
-.btn-outline:hover{background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.8);}
-.hero-card{background:rgba(27,117,50,0.82);border-radius:22px;padding:24px;animation:fadeRight .7s .2s ease both;}
-.hero-card-label{font-size:10px;color:var(--yellow);font-weight:800;letter-spacing:2px;margin-bottom:14px;text-transform:uppercase;}
-.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-.hero-stat{background:rgba(255,255,255,0.15);border-radius:12px;padding:14px 10px;text-align:center;transition:background .2s;}
-.hero-stat:hover{background:rgba(255,255,255,0.22);}
-.hero-stat-ico{margin-bottom:8px;display:flex;justify-content:center;}
-.hero-stat-num{font-size:17px;font-weight:900;color:#fff;line-height:1;}
-.hero-stat-lbl{font-size:10px;color:rgba(255,255,255,0.85);margin-top:4px;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeRight{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:translateX(0)}}
 
-/* WAVE */
+.hero-card{background:rgba(13,59,34,.82);border:1px solid rgba(255,255,255,.18);border-radius:28px;padding:30px 26px;backdrop-filter:blur(20px);animation:fadeRight .7s .2s ease both;}
+.hc-head{font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.24em;text-transform:uppercase;margin-bottom:22px;}
+.hc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.hc-item{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px 12px;text-align:center;transition:background var(--t) var(--ease);cursor:default;}
+.hc-item:hover{background:rgba(255,255,255,.18);}
+.hc-ico{display:flex;justify-content:center;margin-bottom:10px;}
+.hc-num{font-size:17px;font-weight:900;color:#fff;line-height:1;}
+.hc-lbl{font-size:10.5px;color:rgba(255,255,255,.65);margin-top:5px;}
+.hero-countdown{margin-top:18px;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.35);border-radius:14px;padding:14px 16px;}
+.hcd-title{font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.18em;margin-bottom:10px;text-align:center;}
+.hcd-units{display:flex;gap:6px;justify-content:center;align-items:flex-start;}
+.hcd-unit{text-align:center;}
+.hcd-n{font-size:22px;font-weight:900;color:#fff;line-height:1;background:rgba(255,255,255,.12);padding:6px 10px;border-radius:8px;min-width:42px;display:block;}
+.hcd-l{font-size:9px;color:rgba(255,255,255,.5);margin-top:4px;letter-spacing:.1em;}
+.hcd-sep{font-size:22px;font-weight:900;color:rgba(255,255,255,.35);padding-top:6px;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+
 .wave{line-height:0;}
-.wave svg{display:block;}
+.wave svg{display:block;width:100%;}
 
-/* SECTIONS */
-section{padding:80px 20px;}
-.container{max-width:1120px;margin:0 auto;}
-.sec-eyebrow{font-size:11px;font-weight:800;letter-spacing:3px;color:var(--green);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
-.sec-eyebrow::before{content:'';width:20px;height:3px;background:var(--green);border-radius:2px;flex-shrink:0;}
-.sec-title{font-size:clamp(22px,3.5vw,38px);font-weight:900;line-height:1.25;margin-bottom:14px;color:var(--text);}
-.sec-desc{font-size:15px;color:var(--text-sub);line-height:1.85;max-width:580px;}
-.tc{text-align:center;}
-.tc .sec-eyebrow{justify-content:center;}
-.tc .sec-eyebrow::before{display:none;}
-.tc .sec-desc{margin:0 auto;}
-.accent{color:var(--green);}
+/* STATS BAR */
+.stats-bar{background:var(--forest-mid);padding:44px 0;}
+.stats-inner{display:grid;grid-template-columns:repeat(4,1fr);}
+.stat-item{text-align:center;padding:0 24px;position:relative;}
+.stat-item+.stat-item::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:50%;background:rgba(255,255,255,.2);}
+.stat-num{font-size:clamp(28px,3vw,42px);font-weight:900;color:var(--gold);line-height:1;margin-bottom:6px;}
+.stat-unit{font-size:.52em;font-weight:700;}
+.stat-lbl{font-size:12px;color:rgba(255,255,255,.68);font-weight:600;}
 
 /* ABOUT */
-.about{background:var(--bg);}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:48px;}
-.about-imgbox{border-radius:20px;overflow:hidden;box-shadow:0 16px 56px rgba(39,160,69,0.18);position:relative;}
-.about-imgbox img{width:100%;height:420px;object-fit:cover;display:block;}
-.about-imgbox-badge{position:absolute;bottom:18px;left:18px;background:var(--green);color:#fff;padding:10px 18px;border-radius:10px;font-weight:800;font-size:13px;box-shadow:0 4px 16px rgba(0,0,0,0.22);}
-.about-catch{font-size:clamp(20px,2.6vw,28px);font-weight:900;line-height:1.45;color:var(--text);margin-bottom:18px;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-top:64px;}
+.about-img-block{position:relative;}
+.about-img-main{border-radius:28px;overflow:hidden;box-shadow:var(--shadow-xl);position:relative;}
+.about-img-main img{width:100%;height:460px;object-fit:cover;}
+.about-img-main::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,59,34,.4) 0%,transparent 60%);border-radius:28px;}
+.about-badge{position:absolute;bottom:20px;left:20px;z-index:1;background:var(--green);color:#fff;font-size:13px;font-weight:800;padding:11px 20px;border-radius:12px;box-shadow:var(--shadow-green);}
+.about-accent{position:absolute;top:-18px;right:-18px;background:var(--white);border-radius:16px;padding:18px 22px;box-shadow:var(--shadow-lg);z-index:2;border:1px solid var(--border);}
+.aac-lbl{font-size:10.5px;color:var(--ink-3);font-weight:600;margin-bottom:4px;}
+.aac-val{font-size:24px;font-weight:900;color:var(--green);}
+.aac-sub{font-size:11px;color:var(--ink-3);}
+.about-catch{font-size:clamp(20px,2.6vw,30px);font-weight:900;color:var(--ink);line-height:1.45;margin-bottom:20px;}
 .about-catch em{color:var(--green);font-style:normal;}
-.about-body{font-size:15px;color:var(--text-sub);line-height:1.9;margin-bottom:28px;}
-.check-list{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
-.check-item{display:flex;align-items:flex-start;gap:12px;background:#fff;border-radius:10px;padding:13px 16px;border-left:4px solid var(--green);box-shadow:0 1px 6px rgba(0,0,0,0.05);}
-.check-item svg{flex-shrink:0;margin-top:1px;}
-.check-item span{font-size:14px;font-weight:700;color:var(--text);}
+.about-lead{font-size:15px;color:var(--ink-3);line-height:1.9;margin-bottom:32px;}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:36px;}
+.check-item{display:flex;align-items:flex-start;gap:14px;padding:14px 18px;background:var(--green-bg);border-radius:12px;border-left:4px solid var(--green);transition:transform var(--t) var(--ease),box-shadow var(--t) var(--ease);}
+.check-item:hover{transform:translateX(4px);box-shadow:var(--shadow-sm);}
+.check-item span{font-size:14px;font-weight:600;color:var(--ink-2);line-height:1.55;}
 
 /* FEATURES */
-.features{background:#fff;}
-.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:52px;}
-.feat-card{border-radius:20px;padding:36px 28px;position:relative;overflow:hidden;background:var(--green-light);border:1px solid var(--green-mid);transition:transform .3s,box-shadow .3s;}
-.feat-card:hover{transform:translateY(-7px);box-shadow:0 18px 52px rgba(39,160,69,0.18);}
-.feat-card-num{position:absolute;top:-8px;right:18px;font-size:90px;font-weight:900;color:rgba(39,160,69,0.07);line-height:1;user-select:none;}
-.feat-icon{width:64px;height:64px;border-radius:18px;background:var(--green);display:flex;align-items:center;justify-content:center;margin-bottom:22px;box-shadow:0 6px 20px rgba(39,160,69,0.35);}
-.feat-title{font-size:18px;font-weight:900;margin-bottom:12px;color:var(--text);}
-.feat-desc{font-size:13.5px;color:var(--text-sub);line-height:1.8;margin-bottom:18px;}
-.feat-compare{background:#fff;border-radius:12px;padding:14px 16px;margin-bottom:16px;border:1px solid var(--green-mid);}
-.feat-compare-row{display:flex;align-items:center;gap:8px;font-size:13px;}
-.feat-compare-row+.feat-compare-row{margin-top:8px;padding-top:8px;border-top:1px dashed var(--green-mid);}
-.tag-before{background:#fde8e8;color:#c0392b;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap;}
-.tag-after{background:var(--green-light);color:var(--green-dark);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap;}
-.feat-bullets{list-style:none;display:flex;flex-direction:column;gap:7px;}
-.feat-bullets li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-sub);}
-.feat-bullets li::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:6px;}
+.feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:64px;}
+.feat-card{background:var(--white);border-radius:28px;padding:40px 32px;border:1px solid var(--border);position:relative;overflow:hidden;box-shadow:var(--shadow-sm);transition:all var(--t) var(--ease);}
+.feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad-green);}
+.feat-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);}
+.feat-num-bg{position:absolute;top:-10px;right:20px;font-size:110px;font-weight:900;line-height:1;color:rgba(22,163,74,.05);user-select:none;pointer-events:none;}
+.feat-icon{width:64px;height:64px;border-radius:18px;background:var(--grad-green);display:flex;align-items:center;justify-content:center;margin-bottom:22px;box-shadow:var(--shadow-green);}
+.feat-name{font-size:20px;font-weight:900;color:var(--ink);margin-bottom:12px;}
+.feat-desc{font-size:14px;color:var(--ink-3);line-height:1.85;margin-bottom:22px;}
+.before-after{background:var(--surface);border-radius:12px;padding:14px 16px;margin-bottom:18px;border:1px solid var(--border);}
+.ba-row{display:flex;align-items:center;gap:10px;font-size:12.5px;}
+.ba-row+.ba-row{margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);}
+.ba-b{background:#fef2f2;color:#dc2626;font-size:10px;font-weight:800;padding:3px 9px;border-radius:9999px;white-space:nowrap;border:1px solid #fecaca;}
+.ba-a{background:var(--green-bg);color:var(--forest-light);font-size:10px;font-weight:800;padding:3px 9px;border-radius:9999px;white-space:nowrap;border:1px solid var(--green-border);}
+.feat-points{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.feat-points li{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--ink-3);}
+.feat-points li::before{content:'';flex-shrink:0;width:7px;height:7px;border-radius:50%;background:var(--green-v);margin-top:7px;}
 
 /* TIMETABLE */
-.timetable{background:linear-gradient(135deg,var(--green-deeper) 0%,var(--green) 100%);color:#fff;padding:80px 20px;}
-.timetable .sec-eyebrow{color:var(--yellow);}
-.timetable .sec-eyebrow::before{background:var(--yellow);}
-.timetable .sec-title{color:#fff;}
-.tt-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:40px 0;}
-.tt-card{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:22px 20px;backdrop-filter:blur(8px);}
-.tt-card-icon{margin-bottom:12px;}
-.tt-card-label{font-size:13px;color:rgba(255,255,255,0.75);margin-bottom:6px;font-weight:600;}
-.tt-card-time{font-size:clamp(15px,2vw,20px);font-weight:900;color:#fff;line-height:1.3;}
-.tt-scroll-outer{position:relative;}
-.tt-scroll-hint{text-align:center;font-size:12px;color:rgba(255,255,255,0.55);margin-top:12px;display:none;}
-.tt-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,0.3) transparent;}
-.tt-wrap::-webkit-scrollbar{height:5px;}
-.tt-wrap::-webkit-scrollbar-track{background:rgba(255,255,255,0.05);}
-.tt-wrap::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.3);border-radius:3px;}
-.tt-table{border-collapse:collapse;font-size:13px;min-width:660px;width:100%;}
-.tt-table thead th{background:rgba(255,255,255,0.2);padding:12px 12px;text-align:center;font-weight:800;color:#fff;border:1px solid rgba(255,255,255,0.15);white-space:nowrap;font-size:13px;}
-.tt-table thead th:first-child{text-align:center;min-width:50px;}
-.tt-table thead th:nth-child(2){min-width:130px;}
-.tt-table tbody td{padding:10px 12px;text-align:center;border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.88);white-space:nowrap;font-size:13px;}
-.tt-table tbody td:first-child{background:rgba(255,255,255,0.08);font-weight:700;}
-.tt-table tbody td:nth-child(2){text-align:left;font-size:12px;color:rgba(255,255,255,0.7);}
-.tt-table tbody tr:nth-child(even) td{background:rgba(255,255,255,0.04);}
-.tt-table tbody tr:nth-child(even) td:first-child{background:rgba(255,255,255,0.1);}
-.tt-slot{border-radius:6px;padding:5px 10px;font-size:12px;display:inline-block;font-weight:700;}
-.tt-slot.open{background:rgba(245,197,32,0.28);color:var(--yellow);border:1px solid rgba(245,197,32,0.4);}
-.tt-slot.closed{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.35);}
-.tt-summer{background:rgba(245,197,32,0.15);border:1px dashed rgba(245,197,32,0.4);}
+.tt-sec{background:var(--grad-forest);padding:112px 0;position:relative;overflow:hidden;}
+.tt-sec::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:40px 40px;}
+.tt-eye{color:var(--gold);justify-content:center;}
+.tt-eye::before,.tt-eye::after{background:var(--gold);}
+.tt-overview{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:44px 0;}
+.tt-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:24px 20px;backdrop-filter:blur(8px);transition:background var(--t) var(--ease);}
+.tt-card:hover{background:rgba(255,255,255,.16);}
+.tt-card-ico{margin-bottom:12px;}
+.tt-card-lbl{font-size:12px;color:rgba(255,255,255,.65);font-weight:700;margin-bottom:6px;}
+.tt-card-time{font-size:clamp(15px,1.8vw,20px);font-weight:900;color:#fff;}
+.tt-wrap{overflow-x:auto;border-radius:16px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.2) transparent;}
+.tt-wrap::-webkit-scrollbar{height:4px;}
+.tt-wrap::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:2px;}
+.tt-table{border-collapse:collapse;width:100%;min-width:640px;font-size:13px;}
+.tt-table thead th{background:rgba(255,255,255,.18);padding:13px 10px;text-align:center;font-weight:800;color:#fff;border:1px solid rgba(255,255,255,.1);white-space:nowrap;}
+.tt-table thead th:nth-child(2){text-align:left;min-width:130px;}
+.tt-table tbody td{padding:10px;text-align:center;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.8);white-space:nowrap;}
+.tt-table tbody td:first-child{background:rgba(255,255,255,.08);font-weight:700;}
+.tt-table tbody td:nth-child(2){text-align:left;font-size:12px;color:rgba(255,255,255,.6);}
+.tt-summer{background:rgba(245,158,11,.08);}
+.tt-slot{display:inline-block;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:800;}
+.tt-slot.open{background:rgba(34,197,94,.2);color:#86efac;border:1px solid rgba(34,197,94,.3);}
+.tt-hint{display:none;text-align:center;font-size:11.5px;color:rgba(255,255,255,.4);margin-top:10px;}
 
 /* COURSES */
-.courses{background:var(--bg);}
-.tab-nav{display:flex;gap:8px;margin-bottom:0;flex-wrap:wrap;}
-.tab-btn{padding:12px 24px;border-radius:12px 12px 0 0;font-size:14px;font-weight:700;border:none;cursor:pointer;background:#e0ede5;color:var(--text-sub);transition:all .2s;border-bottom:3px solid transparent;}
-.tab-btn.active{background:#fff;color:var(--green);border-bottom:3px solid var(--green);box-shadow:0 -2px 12px rgba(39,160,69,0.1);}
-.tab-panel{display:none;background:#fff;border-radius:0 16px 16px 16px;padding:36px 32px;box-shadow:0 4px 24px rgba(0,0,0,0.06);}
+.tab-nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0;}
+.tab-btn{padding:12px 24px;font-size:14px;font-weight:800;border:2px solid var(--border);border-bottom:2px solid transparent;border-radius:12px 12px 0 0;cursor:pointer;background:var(--surface);color:var(--ink-3);transition:all .2s var(--ease);font-family:inherit;}
+.tab-btn.active{background:var(--white);color:var(--green);border-color:var(--border);border-bottom-color:var(--white);}
+.tab-panel{display:none;background:var(--white);border-radius:0 16px 16px 16px;padding:40px 36px;box-shadow:var(--shadow-md);border:2px solid var(--border);border-top:none;margin-top:-2px;}
 .tab-panel.active{display:block;}
-.course-meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;}
-.course-tag{background:var(--green-light);border:1px solid var(--green-mid);color:var(--green-dark);font-size:12px;font-weight:700;padding:5px 14px;border-radius:20px;}
-.course-include{background:var(--green-light);border-radius:12px;padding:16px 20px;margin-bottom:24px;font-size:14px;color:var(--green-dark);line-height:1.8;font-weight:700;}
-.course-include strong{color:var(--green-dark);font-weight:800;}
-.course-include span{color:var(--green-dark);font-weight:700;}
-.price-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid var(--green-mid);}
-.price-table{width:100%;border-collapse:collapse;font-size:14px;min-width:380px;}
+.course-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;}
+.course-tag{background:var(--green-bg);border:1.5px solid var(--green-border);color:var(--forest-light);font-size:12px;font-weight:700;padding:5px 14px;border-radius:9999px;}
+.course-includes{background:var(--green-bg);border-radius:12px;padding:16px 20px;margin-bottom:24px;font-size:14px;color:var(--forest-mid);font-weight:700;border-left:4px solid var(--green);line-height:1.75;}
+.price-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--green-border);}
+.price-table{width:100%;border-collapse:collapse;font-size:14px;min-width:360px;}
 .price-table thead th{background:var(--green);color:#fff;padding:12px 16px;text-align:center;font-weight:800;}
-.price-table thead th:first-child{text-align:left;border-radius:0;}
-.price-table tbody td{padding:10px 16px;border-bottom:1px solid var(--green-mid);text-align:center;color:var(--text);}
-.price-table tbody td:first-child{font-weight:700;text-align:left;background:var(--green-light);}
+.price-table thead th:first-child{text-align:left;}
+.price-table tbody td{padding:10px 16px;border-bottom:1px solid var(--green-border);text-align:center;color:var(--ink);}
+.price-table tbody td:first-child{font-weight:700;text-align:left;background:var(--green-bg);}
 .price-table tbody tr:last-child td{border-bottom:none;}
-.price-table tbody tr:hover td{background:rgba(39,160,69,0.04);}
-.self-price-box{background:linear-gradient(135deg,var(--green-light),#fff);border:2px solid var(--green);border-radius:16px;padding:28px 32px;text-align:center;margin-top:16px;}
-.self-price-amount{font-size:42px;font-weight:900;color:var(--green);line-height:1;}
-.self-price-label{font-size:14px;color:var(--text-sub);margin-top:6px;}
-.hybrid-box{background:linear-gradient(135deg,#e8f5ec,#f0fbf2);border:1px solid var(--green-mid);border-radius:18px;padding:30px 32px;margin-top:40px;position:relative;overflow:hidden;}
-.hybrid-box::before{content:'';position:absolute;top:0;left:0;width:5px;height:100%;background:var(--green);}
-.hybrid-title{font-size:17px;font-weight:900;color:var(--green-dark);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
-.hybrid-list{list-style:none;display:flex;flex-direction:column;gap:9px;}
-.hybrid-list li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text-sub);}
+.price-table tbody tr:hover td{background:rgba(22,163,74,.03);}
+.self-price{background:linear-gradient(135deg,var(--green-bg),var(--white));border:2px solid var(--green);border-radius:20px;padding:36px;text-align:center;margin-top:20px;}
+.sp-lbl{font-size:13px;color:var(--ink-3);font-weight:700;margin-bottom:14px;}
+.sp-amount{font-size:52px;font-weight:900;color:var(--green);line-height:1;}
+.sp-unit{font-size:14px;color:var(--ink-3);margin-top:8px;}
+.sp-note{font-size:13px;color:var(--ink-3);margin-top:16px;line-height:1.7;}
+.hybrid-box{background:linear-gradient(135deg,#edfaf3,#f4fbf6);border:1px solid var(--green-border);border-radius:20px;padding:30px 32px;margin-top:40px;position:relative;overflow:hidden;}
+.hybrid-box::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--grad-green);}
+.hybrid-h{font-size:16px;font-weight:900;color:var(--forest-mid);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.hybrid-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.hybrid-list li{display:flex;align-items:flex-start;gap:11px;font-size:14px;color:var(--ink-3);}
 .hybrid-list li svg{flex-shrink:0;margin-top:2px;}
-.courses-cta{text-align:center;margin-top:40px;}
-.btn-green{background:var(--green);color:#fff;padding:15px 36px;border-radius:50px;font-size:15px;font-weight:800;text-decoration:none;box-shadow:0 6px 20px rgba(39,160,69,0.35);transition:all .25s;display:inline-flex;align-items:center;gap:8px;}
-.btn-green:hover{background:var(--green-dark);transform:translateY(-3px);box-shadow:0 10px 28px rgba(39,160,69,0.4);}
 
 /* CAMPAIGN */
-.campaign{background:#fff;}
-.campaign-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
-.camp-card{border-radius:20px;padding:32px 24px;background:var(--green-light);border:1px solid var(--green-mid);text-align:center;transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden;}
-.camp-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(39,160,69,0.16);}
-.camp-card-ribbon{position:absolute;top:16px;right:-22px;background:var(--yellow);color:#1c1c1c;font-size:11px;font-weight:800;padding:4px 36px;transform:rotate(35deg);box-shadow:0 2px 8px rgba(0,0,0,0.12);}
-.camp-icon{width:72px;height:72px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 6px 20px rgba(39,160,69,0.35);}
-.camp-title{font-size:17px;font-weight:900;color:var(--text);margin-bottom:12px;}
-.camp-desc{font-size:14px;color:var(--text-sub);line-height:1.75;}
-.camp-highlight{color:var(--green);font-weight:900;font-size:18px;}
+.camp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;}
+.camp-card{background:var(--white);border-radius:28px;padding:36px 28px;border:1px solid var(--border);text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow-sm);transition:all var(--t) var(--ease);}
+.camp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:var(--grad-gold);}
+.camp-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);}
+.camp-ribbon{position:absolute;top:20px;right:-26px;background:var(--gold);color:var(--ink);font-size:10px;font-weight:800;padding:5px 40px;transform:rotate(35deg);letter-spacing:.06em;box-shadow:0 3px 10px rgba(0,0,0,.15);}
+.camp-icon{width:80px;height:80px;border-radius:50%;background:var(--grad-green);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:var(--shadow-green);}
+.camp-name{font-size:18px;font-weight:900;color:var(--ink);margin-bottom:14px;}
+.camp-body{font-size:14px;color:var(--ink-3);line-height:1.8;}
+.camp-hl{color:var(--green);font-weight:900;font-size:19px;}
+.camp-foot{font-size:11.5px;color:var(--ink-4);margin-top:10px;line-height:1.6;}
 
 /* RESULTS */
-.results{background:var(--bg);}
-.results-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:48px;}
-.result-card{background:#fff;border-radius:18px;padding:28px;box-shadow:0 2px 16px rgba(0,0,0,0.06);}
-.result-card-head{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-bottom:14px;border-bottom:2px solid var(--green-light);}
-.result-card-icon{width:44px;height:44px;border-radius:12px;background:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.result-card-title{font-size:16px;font-weight:900;color:var(--text);}
-.result-card-sub{font-size:12px;color:var(--text-muted);}
-.result-tags{display:flex;flex-wrap:wrap;gap:7px;}
-.result-tag{background:var(--green-light);border:1px solid var(--green-mid);color:var(--green-dark);font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:20px;}
-.result-tag.highlight{background:var(--green);color:#fff;border-color:var(--green);}
-.result-note{font-size:12px;color:var(--text-muted);margin-top:14px;font-style:italic;}
-.results-grid-full{grid-column:1/-1;}
+.results-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:60px;}
+.result-card{background:var(--white);border-radius:28px;padding:28px;box-shadow:var(--shadow-sm);border:1px solid var(--border);transition:all var(--t) var(--ease);}
+.result-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);}
+.rc-head{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-bottom:16px;border-bottom:2px solid var(--green-bg);}
+.rc-icon{width:46px;height:46px;border-radius:13px;background:var(--grad-green);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.rc-title{font-size:16px;font-weight:900;color:var(--ink);}
+.rc-sub{font-size:12px;color:var(--ink-4);margin-top:3px;}
+.rc-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.rc-tag{background:var(--green-bg);border:1px solid var(--green-border);color:var(--forest-light);font-size:12.5px;font-weight:600;padding:5px 13px;border-radius:9999px;}
+.rc-tag.hi{background:var(--green);color:#fff;border-color:var(--green);font-weight:800;}
 
 /* VOICES */
-.voices{background:#fff;}
-.voices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
-.voice-card{background:var(--green-light);border:1px solid var(--green-mid);border-radius:18px;padding:28px 24px;position:relative;}
-.voice-card::before{content:'\201C';font-size:72px;color:var(--green-mid);position:absolute;top:-8px;left:18px;line-height:1;font-family:Georgia,serif;}
-.voice-text{font-size:14px;color:var(--text-sub);line-height:1.85;margin-bottom:18px;padding-top:24px;}
-.voice-meta{display:flex;align-items:center;gap:10px;}
-.voice-avatar{width:40px;height:40px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.voice-name{font-size:13px;font-weight:800;color:var(--text);}
-.voice-grade{font-size:12px;color:var(--text-muted);}
+.voices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px;}
+.voice-card{background:var(--white);border-radius:28px;padding:32px 26px;box-shadow:var(--shadow-sm);border:1px solid var(--border);position:relative;overflow:hidden;transition:all var(--t) var(--ease);}
+.voice-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);}
+.voice-card::before{content:'"';position:absolute;top:-5px;left:18px;font-size:90px;color:var(--green-mid);line-height:1;font-family:Georgia,serif;user-select:none;}
+.voice-stars{display:flex;gap:3px;margin-bottom:12px;}
+.voice-text{font-size:14px;color:var(--ink-2);line-height:1.9;margin-bottom:22px;padding-top:30px;}
+.voice-meta{display:flex;align-items:center;gap:12px;}
+.voice-avatar{width:44px;height:44px;border-radius:50%;background:var(--grad-green);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.voice-name{font-size:13.5px;font-weight:800;color:var(--ink);}
+.voice-grade{font-size:12px;color:var(--green);font-weight:700;margin-top:2px;}
 
-/* BUTTON WITH ICON */
-.btn-icon{display:inline-flex;align-items:center;gap:8px;}
-
-/* CAMP NOTE */
-.camp-note{font-size:12px;color:var(--text-muted);margin-top:10px;line-height:1.6;}
-
-/* PROMISE BANNER */
-.promise{position:relative;padding:80px 20px;overflow:hidden;background:var(--green-deeper);}
-.promise-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=1600&q=80') center/cover no-repeat;opacity:0.15;}
-.promise-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,90,39,0.85),rgba(39,160,69,0.75));}
-.promise-inner{position:relative;z-index:2;text-align:center;}
-.promise-quote{font-size:clamp(20px,3.5vw,40px);font-weight:900;color:#fff;line-height:1.4;margin-bottom:24px;letter-spacing:-0.5px;}
-.promise-quote em{color:var(--yellow);font-style:normal;}
-.promise-sub{font-size:15px;color:rgba(255,255,255,0.85);line-height:1.85;max-width:560px;margin:0 auto 32px;}
+/* PROMISE */
+.promise-sec{position:relative;padding:112px 0;overflow:hidden;background:var(--forest);}
+.promise-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,28,13,.94),rgba(22,163,74,.55));}
+.promise-deco{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(22,163,74,.2) 0%,transparent 70%);}
+.promise-inner{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto;padding:0 24px;}
+.promise-quote{font-size:clamp(24px,3.8vw,46px);font-weight:900;color:#fff;line-height:1.35;margin-bottom:24px;letter-spacing:-.02em;}
+.promise-quote em{color:var(--gold);font-style:normal;}
+.promise-body{font-size:16px;color:rgba(255,255,255,.8);line-height:1.9;margin-bottom:36px;}
 
 /* FLOW */
-.flow{background:#fff;}
-.flow-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;position:relative;}
-.flow-steps::before{content:'';position:absolute;top:40px;left:12.5%;right:12.5%;height:3px;background:linear-gradient(90deg,var(--green),var(--green-light));z-index:0;}
+.flow-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px;position:relative;}
+.flow-steps::before{content:'';position:absolute;top:40px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,var(--green),var(--green-v));z-index:0;}
 .flow-step{text-align:center;position:relative;z-index:1;padding:0 16px;}
-.flow-step-num{width:80px;height:80px;border-radius:50%;background:var(--green);color:#fff;font-size:24px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 6px 20px rgba(39,160,69,0.35);position:relative;}
-.flow-step-num::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px dashed rgba(39,160,69,0.35);}
-.flow-step-icon{width:36px;height:36px;position:absolute;bottom:-8px;right:-8px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.12);}
-.flow-step-title{font-size:15px;font-weight:900;color:var(--text);margin-bottom:8px;}
-.flow-step-desc{font-size:13px;color:var(--text-sub);line-height:1.7;}
-.flow-step-link{display:inline-block;margin-top:10px;font-size:12px;color:var(--green);font-weight:700;text-decoration:none;}
-.flow-step-link:hover{text-decoration:underline;}
+.flow-num{width:82px;height:82px;border-radius:50%;background:var(--grad-green);color:#fff;font-size:24px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;box-shadow:var(--shadow-green);position:relative;}
+.flow-num::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2.5px dashed rgba(34,197,94,.35);animation:rotateRing 9s linear infinite;}
+@keyframes rotateRing{to{transform:rotate(360deg)}}
+.flow-ico{position:absolute;bottom:-10px;right:-10px;width:32px;height:32px;border-radius:50%;background:var(--white);box-shadow:var(--shadow-sm);display:flex;align-items:center;justify-content:center;}
+.flow-title{font-size:15px;font-weight:900;color:var(--ink);margin-bottom:8px;}
+.flow-desc{font-size:13px;color:var(--ink-3);line-height:1.75;}
+.flow-link{display:inline-block;margin-top:10px;font-size:12.5px;color:var(--green);font-weight:800;}
+.flow-link:hover{text-decoration:underline;}
 
 /* PRINCIPAL */
-.principal{background:var(--bg);}
-.principal-inner{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:start;margin-top:48px;}
-.principal-photo{border-radius:20px;overflow:hidden;box-shadow:0 16px 56px rgba(0,0,0,0.12);position:relative;}
-.principal-photo img{width:100%;height:420px;object-fit:cover;object-position:center top;}
-.principal-photo-badge{position:absolute;bottom:18px;left:18px;background:var(--green);color:#fff;padding:10px 18px;border-radius:10px;font-weight:800;font-size:13px;}
-.principal-name{font-size:clamp(22px,3vw,32px);font-weight:900;color:var(--text);margin-bottom:6px;}
-.principal-role{font-size:14px;color:var(--green);font-weight:700;letter-spacing:1px;margin-bottom:24px;}
-.principal-msg{font-size:15px;color:var(--text-sub);line-height:1.95;margin-bottom:24px;}
-.principal-career{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.principal-career li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--text-sub);}
-.principal-career li svg{flex-shrink:0;margin-top:2px;}
+.principal-grid{display:grid;grid-template-columns:340px 1fr;gap:60px;align-items:start;margin-top:60px;}
+.principal-photo{border-radius:28px;overflow:hidden;box-shadow:var(--shadow-xl);position:relative;}
+.principal-photo img{width:100%;height:440px;object-fit:cover;object-position:center top;}
+.principal-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,59,34,.5) 0%,transparent 60%);}
+.principal-badge{position:absolute;bottom:20px;left:20px;z-index:1;background:var(--grad-green);color:#fff;font-size:13px;font-weight:800;padding:11px 20px;border-radius:12px;box-shadow:var(--shadow-green);}
+.principal-name{font-size:clamp(24px,3vw,32px);font-weight:900;color:var(--ink);margin-bottom:6px;}
+.principal-role{font-size:13px;color:var(--green);font-weight:800;letter-spacing:.08em;margin-bottom:24px;text-transform:uppercase;}
+.principal-msg{font-size:15px;color:var(--ink-3);line-height:2;margin-bottom:28px;}
+.principal-career{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.principal-career li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--ink-3);}
 
 /* ACCESS */
-.access{background:#fff;}
-.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px;align-items:start;}
-.access-info-cards{display:flex;flex-direction:column;gap:16px;}
-.access-info-card{background:var(--green-light);border-radius:14px;padding:20px 22px;border:1px solid var(--green-mid);}
-.access-info-card-label{font-size:11px;font-weight:800;color:var(--green);letter-spacing:2px;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
-.access-info-card-val{font-size:15px;font-weight:700;color:var(--text);line-height:1.6;}
-.access-info-card-val a{color:var(--green);text-decoration:none;}
-.access-map{border-radius:18px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.1);height:420px;}
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:60px;align-items:start;}
+.access-info{display:flex;flex-direction:column;gap:14px;}
+.access-card{background:var(--green-bg);border-radius:12px;padding:18px 22px;border:1px solid var(--green-border);transition:all var(--t) var(--ease);}
+.access-card:hover{background:var(--white);box-shadow:var(--shadow-sm);}
+.access-lbl{font-size:10.5px;font-weight:800;color:var(--green);letter-spacing:.18em;text-transform:uppercase;margin-bottom:7px;display:flex;align-items:center;gap:6px;}
+.access-val{font-size:15px;font-weight:600;color:var(--ink);line-height:1.65;}
+.access-val a{color:var(--green);}
+.access-map{border-radius:28px;overflow:hidden;box-shadow:var(--shadow-lg);height:440px;}
 .access-map iframe{width:100%;height:100%;border:none;display:block;}
 
 /* FAQ */
-.faq{background:var(--bg);}
-.faq-list{display:flex;flex-direction:column;gap:16px;margin-top:48px;}
-.faq-item{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.05);}
-.faq-q{display:flex;align-items:flex-start;gap:16px;padding:22px 24px;cursor:pointer;transition:background .2s;user-select:none;}
-.faq-q:hover{background:var(--green-light);}
-.faq-q-ico{width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.faq-q-text{font-size:15px;font-weight:700;color:var(--text);flex:1;padding-top:4px;}
-.faq-q-arrow{flex-shrink:0;transition:transform .3s;color:var(--text-muted);margin-top:4px;}
-.faq-item.open .faq-q-arrow{transform:rotate(180deg);}
-.faq-a{display:none;padding:0 24px 22px 72px;font-size:14px;color:var(--text-sub);line-height:1.85;}
+.faq-list{display:flex;flex-direction:column;gap:14px;margin-top:60px;max-width:840px;margin-left:auto;margin-right:auto;}
+.faq-item{background:var(--white);border-radius:16px;border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden;}
+.faq-q{display:flex;align-items:flex-start;gap:14px;padding:22px 24px;cursor:pointer;user-select:none;transition:background .18s var(--ease);}
+.faq-q:hover{background:var(--green-bg);}
+.faq-q-mark{width:32px;height:32px;border-radius:50%;background:var(--grad-green);color:#fff;font-size:14px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.faq-q-text{font-size:15px;font-weight:700;color:var(--ink);flex:1;padding-top:4px;line-height:1.5;}
+.faq-chevron{flex-shrink:0;transition:transform var(--t) var(--ease);color:var(--ink-4);margin-top:4px;}
+.faq-item.open .faq-chevron{transform:rotate(180deg);color:var(--green);}
+.faq-a{display:none;padding:0 24px 24px 70px;font-size:14.5px;color:var(--ink-3);line-height:1.9;}
 .faq-item.open .faq-a{display:block;}
 
 /* CONTACT */
-.contact{background:linear-gradient(135deg,var(--green-deeper),var(--green-dark));padding:80px 20px;}
-.contact-inner{text-align:center;}
-.contact-title{font-size:clamp(26px,4vw,48px);font-weight:900;color:#fff;margin-bottom:16px;line-height:1.2;}
-.contact-title em{color:var(--yellow);font-style:normal;}
-.contact-sub{font-size:15px;color:rgba(255,255,255,0.85);margin-bottom:40px;line-height:1.8;}
-.contact-tel{font-size:clamp(28px,4vw,44px);font-weight:900;color:#fff;margin-bottom:8px;}
-.contact-tel a{color:inherit;text-decoration:none;}
-.contact-tel-label{font-size:13px;color:rgba(255,255,255,0.7);margin-bottom:32px;}
-.btn-yellow-lg{background:var(--yellow);color:#1c1c1c;padding:20px 48px;border-radius:50px;font-size:17px;font-weight:900;text-decoration:none;box-shadow:0 8px 28px rgba(245,197,32,0.5);transition:all .25s;display:inline-flex;align-items:center;gap:10px;letter-spacing:0.3px;}
-.btn-yellow-lg:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(245,197,32,0.6);}
-.contact-addr{margin-top:32px;font-size:13px;color:rgba(255,255,255,0.65);line-height:1.8;}
+.contact-sec{background:var(--grad-forest);padding:112px 0;position:relative;overflow:hidden;}
+.contact-sec::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;}
+.contact-inner{position:relative;z-index:1;text-align:center;}
+.contact-title{font-size:clamp(26px,4vw,52px);font-weight:900;color:#fff;margin-bottom:18px;line-height:1.2;letter-spacing:-.025em;}
+.contact-title em{color:var(--gold);font-style:normal;}
+.contact-lead{font-size:16px;color:rgba(255,255,255,.8);line-height:1.85;margin-bottom:40px;}
+.contact-tel{font-size:clamp(30px,4.5vw,52px);font-weight:900;color:#fff;margin-bottom:8px;letter-spacing:.02em;}
+.contact-tel a{color:inherit;}
+.contact-tel-note{font-size:13px;color:rgba(255,255,255,.6);margin-bottom:36px;}
+.contact-addr{margin-top:36px;font-size:13px;color:rgba(255,255,255,.5);line-height:1.9;}
 
 /* FOOTER */
-footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
-.footer-inner{max-width:1120px;margin:0 auto;}
-.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;margin-bottom:32px;flex-wrap:wrap;}
-.footer-brand{font-size:20px;font-weight:900;color:#fff;margin-bottom:8px;}
-.footer-addr{font-size:13px;line-height:1.8;}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;font-size:12px;text-align:center;}
+.site-footer{background:#050e07;padding:48px 24px 24px;color:rgba(255,255,255,.55);}
+.footer-inner{max-width:1160px;margin:0 auto;}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:36px;margin-bottom:32px;flex-wrap:wrap;}
+.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.footer-logo{width:36px;height:36px;border-radius:10px;object-fit:contain;background:#fff;padding:2px;flex-shrink:0;}
+.footer-name{font-size:18px;font-weight:900;color:#fff;}
+.footer-contact{font-size:13px;line-height:1.9;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:20px;text-align:center;font-size:12px;}
 
-/* MOBILE FLOAT CTA */
-.mobile-float-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;padding:12px 16px;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 -2px 20px rgba(0,0,0,0.12);}
-.mobile-float-cta a{display:block;background:var(--green);color:#fff;text-align:center;padding:14px;border-radius:12px;font-size:15px;font-weight:800;text-decoration:none;box-shadow:0 4px 16px rgba(39,160,69,0.35);}
-
-/* SUMMER ACCENT */
-.summer-wave-sep{line-height:0;overflow:hidden;}
-.summer-wave-sep svg{display:block;}
-.sec-summer-tag{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(90deg,var(--yellow),var(--orange));color:#fff;font-size:11px;font-weight:800;padding:5px 14px;border-radius:50px;margin-bottom:14px;letter-spacing:0.5px;box-shadow:0 3px 12px rgba(240,99,32,0.3);}
+/* MOBILE CTA */
+.mob-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:600;padding:12px 16px;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);box-shadow:0 -3px 24px rgba(0,0,0,.12);}
+.mob-cta a{display:block;background:var(--grad-green);color:#fff;text-align:center;padding:14px;border-radius:12px;font-size:15px;font-weight:900;box-shadow:var(--shadow-green);}
 
 /* REVEAL */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity .65s ease,transform .65s ease;}
-.reveal.visible{opacity:1;transform:translateY(0);}
-.reveal-left{opacity:0;transform:translateX(-32px);transition:opacity .65s ease,transform .65s ease;}
-.reveal-left.visible{opacity:1;transform:translateX(0);}
-.reveal-right{opacity:0;transform:translateX(32px);transition:opacity .65s ease,transform .65s ease;}
-.reveal-right.visible{opacity:1;transform:translateX(0);}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.reveal.vis{opacity:1;transform:none;}
+.reveal-l{opacity:0;transform:translateX(-32px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.reveal-l.vis{opacity:1;transform:none;}
+.reveal-r{opacity:0;transform:translateX(32px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.reveal-r.vis{opacity:1;transform:none;}
+.d2{transition-delay:.1s;}.d3{transition-delay:.2s;}.d4{transition-delay:.3s;}
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr 280px;gap:20px;padding:40px 16px 68px;}
-  .about-grid{grid-template-columns:1fr;}
-  .features-grid{grid-template-columns:1fr 1fr;}
-  .tt-cards{grid-template-columns:1fr;}
-  .campaign-grid{grid-template-columns:1fr;}
+/* RESPONSIVE 960px */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr 300px;gap:28px;}
+  .about-grid{grid-template-columns:1fr;gap:48px;}
+  .about-accent{display:none;}
+  .feat-grid{grid-template-columns:1fr;}
+  .tt-overview{grid-template-columns:1fr 1fr;}
+  .camp-grid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto;}
   .results-grid{grid-template-columns:1fr;}
   .voices-grid{grid-template-columns:1fr;}
-  .flow-steps{grid-template-columns:repeat(2,1fr);gap:28px;}
+  .flow-steps{grid-template-columns:repeat(2,1fr);gap:36px;}
   .flow-steps::before{display:none;}
-  .principal-inner{grid-template-columns:1fr;}
+  .principal-grid{grid-template-columns:1fr;}
   .access-grid{grid-template-columns:1fr;}
   .access-map{height:320px;}
-  .tab-panel{padding:24px 18px;}
+  .stats-inner{grid-template-columns:repeat(2,1fr);gap:24px;}
+  .stat-item+.stat-item::before{display:none;}
+  .tab-panel{padding:28px 24px;}
 }
-@media(max-width:600px){
-  section{padding:52px 16px;}
-  .hero-inner{padding:28px 14px 64px;grid-template-columns:1fr;gap:20px;}
-  .hero-h1{font-size:clamp(24px,7vw,36px);letter-spacing:-0.3px;}
-  .hero-stats{grid-template-columns:repeat(2,1fr);}
+
+/* RESPONSIVE 640px */
+@media(max-width:640px){
+  .sec{padding:68px 0;}
+  .hero-inner{grid-template-columns:1fr;padding:32px 16px 84px;}
+  .hero-h1{font-size:clamp(26px,8vw,38px);}
+  .hero-float{display:none;}
+  .hc-grid{grid-template-columns:repeat(2,1fr);}
   .hero-btns{flex-direction:column;}
-  .btn-yellow,.btn-outline,.btn-green{justify-content:center;}
-  .tab-nav{gap:4px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;}
-  .tab-btn{padding:10px 12px;font-size:12px;white-space:nowrap;}
-  .tab-panel{padding:20px 16px;}
-  .price-table{font-size:12px;}
-  .price-table thead th,.price-table tbody td{padding:8px 10px;}
-  .flow-steps{grid-template-columns:1fr;gap:20px;}
-  .mobile-float-cta{display:block;}
-  body{padding-bottom:68px;}
+  .hero-btns .btn{width:100%;justify-content:center;}
+  .tt-overview{grid-template-columns:1fr;}
+  .tt-hint{display:block;}
+  .flow-steps{grid-template-columns:1fr;}
+  .mob-cta{display:block;}
+  body{padding-bottom:72px;}
   .footer-top{flex-direction:column;}
-  .features-grid{grid-template-columns:1fr;}
-  .voices-grid{grid-template-columns:1fr;}
-  .header-subtitle{font-size:11px;}
-  .sec-title{font-size:clamp(20px,5vw,28px);}
-  .principal-inner{gap:32px;grid-template-columns:1fr;}
-  .contact-title{font-size:clamp(22px,5vw,36px);}
-  .btn-yellow-lg{padding:16px 24px;font-size:14px;}
-  .campaign-grid{grid-template-columns:1fr;}
-  .hero-period{padding:12px 16px;}
-  .hero-period-date{font-size:14px;}
-  .tt-scroll-hint{display:block;}
-  .hero-float-badge{display:none;}
-  .hero-card{order:2;}
+  .tab-nav{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;gap:4px;}
+  .tab-btn{white-space:nowrap;padding:10px 14px;font-size:13px;flex-shrink:0;}
+  .tab-panel{padding:20px 16px;}
+  .camp-grid{max-width:100%;}
+  .hd-name{font-size:11px;}
+  .access-map{height:280px;}
+  .stats-inner{grid-template-columns:repeat(2,1fr);}
+  .btn-gold-lg{padding:16px 32px;font-size:15px;}
 }
 </style>
 </head>
 <body>
 
 <!-- HEADER -->
-<header>
-  <a href="https://manabiya-bstudy.netlify.app/" class="header-logo-wrap" style="text-decoration:none;">
-    <span class="header-subtitle">MANABIYA Bースタディ<br>夏期講習専用ページ</span>
+<header class="site-header" id="site-header">
+  <a href="https://manabiya-bstudy.netlify.app/" class="hd-brand">
+    <img src="assets/logo.png" alt="ロゴ" class="hd-logo">
+    <div class="hd-name">MANABIYA Bースタディ<br>夏期講習専用ページ</div>
   </a>
-  <a href="https://manabiya-bstudy.netlify.app/" class="header-cta">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    教室見学・体験授業申込
+  <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-primary hd-cta">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    教室見学・体験申込
   </a>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-slides">
-    <div class="hero-slide active">
-      <img src="assets/hero1.jpg" alt="授業風景1">
-    </div>
-    <div class="hero-slide">
-      <img src="assets/hero2.jpg" alt="授業風景2">
-    </div>
-    <div class="hero-slide">
-      <img src="assets/hero3.jpg" alt="教室入口">
-    </div>
-    <div class="hero-slide">
-      <img src="assets/hero4.jpg" alt="個別指導">
-    </div>
+  <div class="hero-bg">
+    <div class="hero-slide active"><img src="assets/hero1.jpg" alt="授業風景1" loading="eager"></div>
+    <div class="hero-slide"><img src="assets/hero2.jpg" alt="授業風景2" loading="lazy"></div>
+    <div class="hero-slide"><img src="assets/hero3.jpg" alt="受付エリア" loading="lazy"></div>
+    <div class="hero-slide"><img src="assets/hero4.jpg" alt="学習相談" loading="lazy"></div>
   </div>
   <div class="hero-overlay"></div>
+  <div class="hero-overlay-b"></div>
+  <div class="hero-dot-pattern"></div>
+
   <!-- Sun decoration -->
-  <svg class="hero-sun" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <g class="hero-sun-rays">
-      <line x1="170" y1="10" x2="170" y2="70" stroke="#f5c520" stroke-width="6" stroke-linecap="round"/>
-      <line x1="170" y1="270" x2="170" y2="330" stroke="#f5c520" stroke-width="6" stroke-linecap="round"/>
-      <line x1="10" y1="170" x2="70" y2="170" stroke="#f5c520" stroke-width="6" stroke-linecap="round"/>
-      <line x1="270" y1="170" x2="330" y2="170" stroke="#f5c520" stroke-width="6" stroke-linecap="round"/>
-      <line x1="51" y1="51" x2="93" y2="93" stroke="#f5c520" stroke-width="5" stroke-linecap="round"/>
-      <line x1="247" y1="247" x2="289" y2="289" stroke="#f5c520" stroke-width="5" stroke-linecap="round"/>
-      <line x1="289" y1="51" x2="247" y2="93" stroke="#f5c520" stroke-width="5" stroke-linecap="round"/>
-      <line x1="93" y1="247" x2="51" y2="289" stroke="#f5c520" stroke-width="5" stroke-linecap="round"/>
-    </g>
-    <circle cx="170" cy="170" r="68" fill="#f5c520" opacity="0.85"/>
-  </svg>
+  <div class="hero-sun" aria-hidden="true">
+    <div class="hero-sun-glow"></div>
+    <svg viewBox="0 0 540 540" fill="none" style="position:absolute;inset:0;width:100%;height:100%;">
+      <g class="hero-sun-rays">
+        <line x1="270" y1="14" x2="270" y2="92" stroke="#f59e0b" stroke-width="7" stroke-linecap="round" opacity=".7"/>
+        <line x1="270" y1="448" x2="270" y2="526" stroke="#f59e0b" stroke-width="7" stroke-linecap="round" opacity=".7"/>
+        <line x1="14" y1="270" x2="92" y2="270" stroke="#f59e0b" stroke-width="7" stroke-linecap="round" opacity=".7"/>
+        <line x1="448" y1="270" x2="526" y2="270" stroke="#f59e0b" stroke-width="7" stroke-linecap="round" opacity=".7"/>
+        <line x1="72" y1="72" x2="130" y2="130" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" opacity=".5"/>
+        <line x1="410" y1="410" x2="468" y2="468" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" opacity=".5"/>
+        <line x1="468" y1="72" x2="410" y2="130" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" opacity=".5"/>
+        <line x1="130" y1="410" x2="72" y2="468" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" opacity=".5"/>
+        <line x1="162" y1="22" x2="188" y2="100" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
+        <line x1="378" y1="440" x2="352" y2="518" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
+        <line x1="518" y1="162" x2="440" y2="188" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
+        <line x1="100" y1="378" x2="22" y2="404" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
+        <line x1="22" y1="162" x2="100" y2="188" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
+        <line x1="440" y1="352" x2="518" y2="378" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
+        <line x1="378" y1="22" x2="352" y2="100" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
+        <line x1="162" y1="440" x2="188" y2="518" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
+      </g>
+      <circle cx="270" cy="270" r="88" fill="#f59e0b" opacity=".16"/>
+      <circle cx="270" cy="270" r="62" fill="#f59e0b" opacity=".14"/>
+    </svg>
+  </div>
+
   <!-- Floating badges -->
-  <div class="hero-floats">
-    <div class="hero-float-badge">
-      <div class="hero-float-badge-icon">☀️</div>
-      <div class="hero-float-badge-val">年中無休</div>
-      <div class="hero-float-badge-sub">365日通塾可能</div>
-    </div>
-    <div class="hero-float-badge">
-      <div class="hero-float-badge-icon">📚</div>
-      <div class="hero-float-badge-val">小1〜高3</div>
-      <div class="hero-float-badge-sub">全学年・全教科対応</div>
-    </div>
+  <div class="hero-float">
+    <div class="hf-icon">☀️</div>
+    <div class="hf-val">年中無休</div>
+    <div class="hf-sub">365日通塾可能</div>
   </div>
-  <!-- Dot nav -->
-  <div class="hero-dots">
-    <div class="hero-dot active" onclick="gotoSlide(0)"></div>
-    <div class="hero-dot" onclick="gotoSlide(1)"></div>
-    <div class="hero-dot" onclick="gotoSlide(2)"></div>
-    <div class="hero-dot" onclick="gotoSlide(3)"></div>
+  <div class="hero-float">
+    <div class="hf-icon">📚</div>
+    <div class="hf-val">小1〜高3</div>
+    <div class="hf-sub">全学年・全教科対応</div>
   </div>
+
+  <!-- Paginator -->
+  <div class="hero-pager">
+    <div class="hpg-dot active" onclick="gotoSlide(0)"></div>
+    <div class="hpg-dot" onclick="gotoSlide(1)"></div>
+    <div class="hpg-dot" onclick="gotoSlide(2)"></div>
+    <div class="hpg-dot" onclick="gotoSlide(3)"></div>
+  </div>
+
   <div class="hero-inner">
-    <div class="hero-left">
-      <div class="hero-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#1c1c1c"/></svg>
+    <div>
+      <div class="hero-tag">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#0f172a"/></svg>
         2026年 夏期講習 受付中
       </div>
-      <h1 class="hero-h1">「<em>変われる夏</em>」に<br>しませんか？</h1>
+      <h1 class="hero-h1">
+        「<em>変われる夏</em>」に<br>しませんか？
+        <span class="sub">MANABIYA Bースタディ 夏期講習 2026</span>
+      </h1>
       <div class="hero-period">
-        <span class="hero-period-label">SUMMER COURSE 2026</span>
-        <span class="hero-period-date">2026年7月1日(水)〜8月31日(月)</span>
+        <span class="hp-label">SUMMER COURSE 2026</span>
+        <span class="hp-date">2026年7月1日(水)〜8月31日(月)</span>
       </div>
       <div class="hero-btns">
-        <a href="https://manabiya-bstudy.netlify.app/" class="btn-yellow btn-icon">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#1c1c1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#1c1c1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-gold">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           今すぐ申し込む
+        </a>
+        <a href="tel:0858271991" class="btn btn-ghost">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.42 2 2 0 0 1 3.62 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          電話で問い合わせる
         </a>
       </div>
     </div>
+
     <div class="hero-card">
-      <div class="hero-card-label">Bースタディの特長</div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="hero-stat-ico">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><path d="M12 6v6l4 2" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <div class="hero-stat-num">年中無休</div>
-          <div class="hero-stat-lbl">365日通塾可能</div>
+      <div class="hc-head">Bースタディの特長</div>
+      <div class="hc-grid">
+        <div class="hc-item">
+          <div class="hc-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,.9)" stroke-width="2"/><path d="M12 6v6l4 2" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div class="hc-num">年中無休</div><div class="hc-lbl">365日通塾可能</div>
         </div>
-        <div class="hero-stat">
-          <div class="hero-stat-ico">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="rgba(255,255,255,0.9)" stroke-width="2"/><path d="M8 2v4M16 2v4M3 10h18" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <div class="hero-stat-num">80分/コマ</div>
-          <div class="hero-stat-lbl">充実の授業時間</div>
+        <div class="hc-item">
+          <div class="hc-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="rgba(255,255,255,.9)" stroke-width="2"/><path d="M8 2v4M16 2v4M3 10h18" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div class="hc-num">80分/コマ</div><div class="hc-lbl">充実の授業時間</div>
         </div>
-        <div class="hero-stat">
-          <div class="hero-stat-ico">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.9)" stroke-width="2"/></svg>
-          </div>
-          <div class="hero-stat-num">振替OK</div>
-          <div class="hero-stat-lbl">柔軟なスケジュール</div>
+        <div class="hc-item">
+          <div class="hc-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="rgba(255,255,255,.9)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,.9)" stroke-width="2"/></svg></div>
+          <div class="hc-num">振替OK</div><div class="hc-lbl">柔軟スケジュール</div>
         </div>
-        <div class="hero-stat">
-          <div class="hero-stat-ico">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="hero-stat-num">全教科</div>
-          <div class="hero-stat-lbl">小1〜高3対応</div>
+        <div class="hc-item">
+          <div class="hc-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="hc-num">全教科</div><div class="hc-lbl">小1〜高3対応</div>
+        </div>
+      </div>
+      <div class="hero-countdown">
+        <div class="hcd-title">早期申込特典 締切まで</div>
+        <div class="hcd-units">
+          <div class="hcd-unit"><span class="hcd-n" id="cd-d">--</span><div class="hcd-l">DAY</div></div>
+          <div class="hcd-sep">:</div>
+          <div class="hcd-unit"><span class="hcd-n" id="cd-h">--</span><div class="hcd-l">HR</div></div>
+          <div class="hcd-sep">:</div>
+          <div class="hcd-unit"><span class="hcd-n" id="cd-m">--</span><div class="hcd-l">MIN</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="wave" style="background:var(--bg);">
-  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" height="60" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,40 C240,8 480,60 720,36 C960,12 1200,56 1440,32 L1440,60 L0,60 Z" fill="var(--bg)"/>
-  </svg>
+<div class="wave" style="background:var(--forest-mid);">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" height="60"><path d="M0,0 C240,60 480,0 720,30 C960,60 1200,10 1440,40 L1440,0 L0,0 Z" fill="#071c0d"/></svg>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar reveal">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-num" data-target="365">0<span class="stat-unit">日</span></div>
+        <div class="stat-lbl">年中無休で通塾可能</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="80">0<span class="stat-unit">分</span></div>
+        <div class="stat-lbl">充実の1コマ授業時間</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="8">0<span class="stat-unit">コマ</span></div>
+        <div class="stat-lbl">1日最大受講コマ数</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="30">0<span class="stat-unit">回</span></div>
+        <div class="stat-lbl">最大受講回数（ハイブリッド）</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wave" style="background:var(--surface);">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" height="60"><path d="M0,60 C360,0 720,60 1080,20 C1260,0 1380,40 1440,30 L1440,60 L0,60 Z" fill="var(--forest-mid)"/></svg>
 </div>
 
 <!-- ABOUT -->
-<section class="about">
+<section class="sec" style="background:var(--surface);">
   <div class="container">
     <div class="about-grid">
-      <div class="about-imgbox reveal-left">
-        <img src="assets/student.png" alt="勉強する学生">
-        <div class="about-imgbox-badge">🌱 あなたに合った学習プランで</div>
+      <div class="about-img-block reveal-l">
+        <div class="about-img-main">
+          <img src="assets/hero3.jpg" alt="教室の様子">
+          <div class="about-badge">🌱 あなたに合った学習プランで</div>
+        </div>
+        <div class="about-accent">
+          <div class="aac-lbl">夏期限定</div>
+          <div class="aac-val">入塾金 無料</div>
+          <div class="aac-sub">通常 ¥11,000 → ¥0</div>
+        </div>
       </div>
-      <div class="reveal-right">
-        <div class="sec-eyebrow">ABOUT</div>
+      <div class="reveal-r">
+        <div class="eyebrow">ABOUT US</div>
         <h2 class="about-catch">自分にピッタリのプランで<br><em>この夏、本気になろう。</em></h2>
-        <p class="about-body">
-          Bースタディは、鳥取県倉吉市にある個別指導塾です。<br>
-          生徒一人ひとりの学力・目標・生活スタイルに合わせて、最適な学習プランをご提案します。<br><br>
-          夏期講習は、苦手科目の克服・定期テスト対策・受験準備まで幅広く対応。自習室は年中無休で利用可能なので、勉強習慣をしっかり身につけることができます。<br><br>
-          「もっとやりたかったのに時間が足りなかった」という後悔のない夏にするために、今すぐスタートしましょう。
-        </p>
+        <p class="about-lead">Bースタディは、鳥取県倉吉市にある個別指導塾です。生徒一人ひとりの学力・目標・生活スタイルに合わせて、最適な学習プランをご提案します。<br><br>夏期講習は、苦手科目の克服・定期テスト対策・受験準備まで幅広く対応。自習室は年中無休で利用可能なので、勉強習慣をしっかり身につけることができます。</p>
         <ul class="check-list">
           <li class="check-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#27a045"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span>小学1年生〜高校3年生まで全学年・全教科対応</span>
           </li>
           <li class="check-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#27a045"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span>年中無休・振替制度あり。自分のペースで通塾可能</span>
           </li>
           <li class="check-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#27a045"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span>自習室使い放題・スポット指導アプリ使い放題</span>
           </li>
           <li class="check-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#27a045"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span>夏期講習は入塾金無料（通常¥11,000）</span>
           </li>
         </ul>
-        <a href="https://manabiya-bstudy.netlify.app/" class="btn-green btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>教室見学・無料体験授業申込フォーム</a>
+        <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          教室見学・無料体験授業申込フォーム
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FEATURES -->
-<section class="features">
+<section class="sec">
   <div class="container">
     <div class="tc">
-      <div class="sec-summer-tag">🌞 SUMMER 2026</div>
-      <div class="sec-eyebrow">FEATURES</div>
-      <h2 class="sec-title">Bースタディが選ばれる<span class="accent">4つの理由</span></h2>
-      <p class="sec-desc">生徒一人ひとりに向き合う指導方針で、着実に成果を出します。</p>
+      <span class="badge badge-gold" style="margin-bottom:14px;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="#d97706"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="#d97706" stroke-width="2" stroke-linecap="round"/></svg>
+        SUMMER 2026
+      </span>
+      <div class="eyebrow">WHY CHOOSE US</div>
+      <h2 class="sec-title">Bースタディが選ばれる<span class="hl"> 4つの理由</span></h2>
+      <p class="sec-lead">生徒一人ひとりに向き合う指導方針で、着実に成果を出します。</p>
     </div>
-    <div class="features-grid" style="margin-top:52px;">
-
+    <div class="feat-grid">
       <div class="feat-card reveal">
-        <div class="feat-card-num">01</div>
+        <div class="feat-num-bg">01</div>
         <div class="feat-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#fff" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        <h3 class="feat-title">個別型指導</h3>
+        <h3 class="feat-name">個別型指導</h3>
         <p class="feat-desc">生徒一人ひとりの理解度・進捗に合わせた完全個別カリキュラムで、着実に学力を伸ばします。</p>
-        <div class="feat-compare">
-          <div class="feat-compare-row">
-            <span class="tag-before">Before</span>
-            <span style="font-size:13px;color:#777;">授業についていけず自信を失う</span>
-          </div>
-          <div class="feat-compare-row">
-            <span class="tag-after">After</span>
-            <span style="font-size:13px;color:#2d6a3f;">自分のペースで確実に理解できる</span>
-          </div>
+        <div class="before-after">
+          <div class="ba-row"><span class="ba-b">Before</span><span style="color:#666;">授業についていけず自信を失う</span></div>
+          <div class="ba-row"><span class="ba-a">After</span><span style="color:#155d36;">自分のペースで確実に理解できる</span></div>
         </div>
-        <ul class="feat-bullets">
+        <ul class="feat-points">
           <li>担当講師が専用プランを作成</li>
           <li>苦手分野を集中的に克服</li>
           <li>理解できるまで何度でも質問OK</li>
           <li>小1〜高3まで全学年・全教科対応</li>
         </ul>
       </div>
-
-      <div class="feat-card reveal">
-        <div class="feat-card-num">02</div>
+      <div class="feat-card reveal d2">
+        <div class="feat-num-bg">02</div>
         <div class="feat-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3 class="feat-title">安心のサポート体制</h3>
+        <h3 class="feat-name">安心のサポート体制</h3>
         <p class="feat-desc">保護者と塾が連携できる専用アプリ「Comiru」を活用。お子さんの学習状況をリアルタイムで共有します。</p>
-        <div class="feat-compare">
-          <div class="feat-compare-row">
-            <span class="tag-before">Before</span>
-            <span style="font-size:13px;color:#777;">塾での様子が保護者に見えない</span>
-          </div>
-          <div class="feat-compare-row">
-            <span class="tag-after">After</span>
-            <span style="font-size:13px;color:#2d6a3f;">出欠・進捗・連絡をアプリで確認</span>
-          </div>
+        <div class="before-after">
+          <div class="ba-row"><span class="ba-b">Before</span><span style="color:#666;">塾での様子が保護者に見えない</span></div>
+          <div class="ba-row"><span class="ba-a">After</span><span style="color:#155d36;">出欠・進捗・連絡をアプリで確認</span></div>
         </div>
-        <ul class="feat-bullets">
+        <ul class="feat-points">
           <li>専用アプリ「Comiru」で連絡管理</li>
           <li>授業報告・宿題内容を随時共有</li>
           <li>スポット指導アプリで自宅学習サポート</li>
           <li>保護者面談にも丁寧に対応</li>
         </ul>
       </div>
-
       <div class="feat-card reveal">
-        <div class="feat-card-num">03</div>
+        <div class="feat-num-bg">03</div>
         <div class="feat-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#fff" stroke-width="2"/><path d="M8 2v4M16 2v4M3 10h18" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#fff" stroke-width="2"/><path d="M8 2v4M16 2v4M3 10h18" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
         </div>
-        <h3 class="feat-title">都合に合わせて通塾</h3>
+        <h3 class="feat-name">都合に合わせて通塾</h3>
         <p class="feat-desc">年中無休・振替制度完備で、部活・習い事との両立も安心。自分のライフスタイルに合わせて通えます。</p>
-        <div class="feat-compare">
-          <div class="feat-compare-row">
-            <span class="tag-before">Before</span>
-            <span style="font-size:13px;color:#777;">スケジュールが合わず通えない</span>
-          </div>
-          <div class="feat-compare-row">
-            <span class="tag-after">After</span>
-            <span style="font-size:13px;color:#2d6a3f;">いつでも振替・自習室で柔軟対応</span>
-          </div>
+        <div class="before-after">
+          <div class="ba-row"><span class="ba-b">Before</span><span style="color:#666;">スケジュールが合わず通えない</span></div>
+          <div class="ba-row"><span class="ba-a">After</span><span style="color:#155d36;">いつでも振替・自習室で柔軟対応</span></div>
         </div>
-        <ul class="feat-bullets">
+        <ul class="feat-points">
           <li>年中無休365日通塾可能</li>
           <li>振替制度で欠席も安心</li>
           <li>自習室は営業時間内いつでも利用可</li>
           <li>平日・土日・祝日フル対応</li>
         </ul>
       </div>
-
-      <div class="feat-card reveal">
-        <div class="feat-card-num">04</div>
+      <div class="feat-card reveal d2">
+        <div class="feat-num-bg">04</div>
         <div class="feat-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3 class="feat-title">充実した自習環境</h3>
+        <h3 class="feat-name">充実した自習環境</h3>
         <p class="feat-desc">朝から夜まで年中無休365日で自習室を開放。コピー機や参考書も使い放題。講師の空き時間には気軽に質問できます。</p>
-        <div class="feat-compare">
-          <div class="feat-compare-row">
-            <span class="tag-before">Before</span>
-            <span style="font-size:13px;color:#777;">家では集中できず、質問もできない</span>
-          </div>
-          <div class="feat-compare-row">
-            <span class="tag-after">After</span>
-            <span style="font-size:13px;color:#2d6a3f;">充実の環境で毎日集中して学習できる</span>
-          </div>
+        <div class="before-after">
+          <div class="ba-row"><span class="ba-b">Before</span><span style="color:#666;">家では集中できず、質問もできない</span></div>
+          <div class="ba-row"><span class="ba-a">After</span><span style="color:#155d36;">充実の環境で毎日集中して学習</span></div>
         </div>
-        <ul class="feat-bullets">
+        <ul class="feat-points">
           <li>朝から夜まで年中無休365日開放</li>
           <li>コピー機・参考書使い放題</li>
           <li>講師の空き時間に質問し放題</li>
           <li>集中できる学習専用スペース</li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- TIMETABLE -->
-<section class="timetable">
+<section class="tt-sec">
   <div class="container">
     <div class="tc">
-      <div class="sec-eyebrow">TIMETABLE</div>
+      <div class="eyebrow tt-eye">TIMETABLE</div>
       <h2 class="sec-title" style="color:#fff;">授業時間割</h2>
-      <p class="sec-desc" style="color:rgba(255,255,255,0.8);margin:0 auto;">1コマ80分。1日最大8コマ受講可能です。</p>
+      <p class="sec-lead" style="color:rgba(255,255,255,.75);margin:0 auto;">1コマ80分。1日最大8コマ受講可能です。</p>
     </div>
-    <div class="tt-cards">
+    <div class="tt-overview">
       <div class="tt-card reveal">
-        <div class="tt-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" stroke="#f5c520" stroke-width="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" stroke="#f5c520" stroke-width="2"/></svg>
-        </div>
-        <div class="tt-card-label">平日（月〜金）</div>
+        <div class="tt-card-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" stroke="#f59e0b" stroke-width="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" stroke="#f59e0b" stroke-width="2"/></svg></div>
+        <div class="tt-card-lbl">平日（月〜金）</div>
         <div class="tt-card-time">16:00〜22:00</div>
       </div>
-      <div class="tt-card reveal">
-        <div class="tt-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="#f5c520" stroke-width="2"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="#f5c520" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <div class="tt-card-label">土日祝</div>
+      <div class="tt-card reveal d2">
+        <div class="tt-card-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="#f59e0b" stroke-width="2"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="tt-card-lbl">土日祝</div>
         <div class="tt-card-time">10:00〜22:00</div>
       </div>
-      <div class="tt-card reveal">
-        <div class="tt-card-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#f5c520" stroke-width="2" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="tt-card-label">夏期講習期間 7/1〜8/31</div>
+      <div class="tt-card reveal d3">
+        <div class="tt-card-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#f59e0b" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <div class="tt-card-lbl">夏期講習期間（7/1〜8/31）</div>
         <div class="tt-card-time">毎日 10:00〜22:00</div>
       </div>
     </div>
-    <div class="tt-scroll-outer reveal">
+    <div class="reveal">
       <div class="tt-wrap">
         <table class="tt-table">
           <thead>
-            <tr>
-              <th>コマ</th>
-              <th>時間帯</th>
-              <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th>
-            </tr>
+            <tr><th>コマ</th><th>時間帯</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
           </thead>
           <tbody>
             <tr class="tt-summer"><td>1コマ</td><td>10:00〜11:20</td><td><span class="tt-slot open">○</span></td><td><span class="tt-slot open">○</span></td><td><span class="tt-slot open">○</span></td><td><span class="tt-slot open">○</span></td><td><span class="tt-slot open">○</span></td><td><span class="tt-slot open">○</span></td><td><span class="tt-slot open">○</span></td></tr>
@@ -711,40 +749,32 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
           </tbody>
         </table>
       </div>
-      <p class="tt-scroll-hint">← 左右にスクロールできます →</p>
+      <p class="tt-hint">← 左右にスクロールできます →</p>
+      <p style="text-align:center;font-size:12px;color:rgba(255,255,255,.45);margin-top:14px;">🌞 黄色ハイライト行は夏期講習期間中（7/1〜8/31）に追加される時間帯です</p>
     </div>
-    <p style="text-align:center;font-size:12px;color:rgba(255,255,255,0.6);margin-top:16px;">🌞 黄色ハイライト行は夏期講習期間中（7/1〜8/31）に追加される時間帯です</p>
   </div>
 </section>
 
 <!-- COURSES -->
-<section class="courses">
+<section class="sec">
   <div class="container">
     <div class="tc">
-      <div class="sec-eyebrow">COURSES</div>
-      <h2 class="sec-title">夏期講習 <span class="accent">コース一覧</span></h2>
-      <p class="sec-desc">ご自身の目標や状況に合わせてコースをお選びください。</p>
+      <div class="eyebrow">COURSES</div>
+      <h2 class="sec-title">夏期講習 <span class="hl">コース一覧</span></h2>
+      <p class="sec-lead">ご自身の目標や状況に合わせてコースをお選びください。</p>
     </div>
-    <div style="margin-top:48px;">
+    <div style="margin-top:52px;">
       <div class="tab-nav">
-        <button class="tab-btn active" onclick="switchTab(0)">プライベートレッスンコース</button>
-        <button class="tab-btn" onclick="switchTab(1)">セルフラーニングコース</button>
-        <button class="tab-btn" onclick="switchTab(2)">コーチングコース</button>
+        <button class="tab-btn active" onclick="switchTab(0)">プライベートレッスン</button>
+        <button class="tab-btn" onclick="switchTab(1)">セルフラーニング</button>
+        <button class="tab-btn" onclick="switchTab(2)">コーチング</button>
       </div>
-
-      <!-- Tab 1 -->
-      <div class="tab-panel active" id="tab-0">
-        <div class="course-meta">
-          <span class="course-tag">対象：小学1年生〜高校3年生</span>
-        </div>
-        <div class="course-include">
-          <strong>含まれるもの：</strong><strong>個別指導 4回〜15回</strong> ＋ <strong>自習室使い放題</strong> ＋ <strong>スポット指導アプリ使い放題</strong>
-        </div>
+      <div class="tab-panel active" id="tp-0">
+        <div class="course-tags"><span class="course-tag">対象：小学1年生〜高校3年生</span></div>
+        <div class="course-includes"><strong>含まれるもの：</strong>個別指導 4回〜15回 ＋ 自習室使い放題 ＋ スポット指導アプリ使い放題</div>
         <div class="price-wrap">
           <table class="price-table">
-            <thead>
-              <tr><th>回数</th><th>小学生（税込）</th><th>中学生（税込）</th><th>高校生（税込）</th></tr>
-            </thead>
+            <thead><tr><th>回数</th><th>小学生（税込）</th><th>中学生（税込）</th><th>高校生（税込）</th></tr></thead>
             <tbody>
               <tr><td>4回</td><td>¥14,000</td><td>¥16,000</td><td>¥18,000</td></tr>
               <tr><td>5回</td><td>¥17,500</td><td>¥20,000</td><td>¥22,500</td></tr>
@@ -762,36 +792,22 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
           </table>
         </div>
       </div>
-
-      <!-- Tab 2 -->
-      <div class="tab-panel" id="tab-1">
-        <div class="course-meta">
-          <span class="course-tag">対象：高校1年生〜高校3年生</span>
-        </div>
-        <div class="course-include">
-          <strong>含まれるもの：</strong><strong>自習室使い放題</strong> ＋ <strong>スポット指導アプリ使い放題</strong>（授業回数なし）
-        </div>
-        <div class="self-price-box">
-          <div style="font-size:14px;color:var(--text-sub);margin-bottom:12px;font-weight:700;">毎日利用プラン</div>
-          <div class="self-price-amount">¥11,000</div>
-          <div class="self-price-label">高校生（税込）</div>
-          <div style="margin-top:16px;font-size:13px;color:var(--text-muted);">自習室を思う存分活用し、自らの意志で学びを深めたい高校生向けのコースです。</div>
+      <div class="tab-panel" id="tp-1">
+        <div class="course-tags"><span class="course-tag">対象：高校1年生〜高校3年生</span></div>
+        <div class="course-includes"><strong>含まれるもの：</strong>自習室使い放題 ＋ スポット指導アプリ使い放題（授業回数なし）</div>
+        <div class="self-price">
+          <div class="sp-lbl">毎日利用プラン</div>
+          <div class="sp-amount">¥11,000</div>
+          <div class="sp-unit">高校生（税込）</div>
+          <div class="sp-note">自習室を思う存分活用し、自らの意志で学びを深めたい高校生向けのコースです。</div>
         </div>
       </div>
-
-      <!-- Tab 3 -->
-      <div class="tab-panel" id="tab-2">
-        <div class="course-meta">
-          <span class="course-tag">対象：中学1年生〜高校3年生</span>
-        </div>
-        <div class="course-include">
-          <strong>含まれるもの：</strong><strong>コーチング 4回〜15回</strong> ＋ <strong>自習室使い放題</strong> ＋ <strong>スポット指導アプリ使い放題</strong>
-        </div>
+      <div class="tab-panel" id="tp-2">
+        <div class="course-tags"><span class="course-tag">対象：中学1年生〜高校3年生</span></div>
+        <div class="course-includes"><strong>含まれるもの：</strong>コーチング 4回〜15回 ＋ 自習室使い放題 ＋ スポット指導アプリ使い放題</div>
         <div class="price-wrap">
           <table class="price-table">
-            <thead>
-              <tr><th>回数</th><th>中学生（税込）</th><th>高校生（税込）</th></tr>
-            </thead>
+            <thead><tr><th>回数</th><th>中学生（税込）</th><th>高校生（税込）</th></tr></thead>
             <tbody>
               <tr><td>4回</td><td>¥16,000</td><td>¥18,000</td></tr>
               <tr><td>5回</td><td>¥20,000</td><td>¥22,500</td></tr>
@@ -809,30 +825,16 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
           </table>
         </div>
       </div>
-
-      <!-- Hybrid Box -->
       <div class="hybrid-box reveal">
-        <div class="hybrid-title">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#27a045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="hybrid-h">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           プライベートレッスン × コーチング ハイブリッド受講について
         </div>
         <ul class="hybrid-list">
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#27a045"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            プライベートレッスンとコーチングコースは好きな回数ずつ組み合わせて受講可能
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#27a045"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            ハイブリッド受講希望の場合：合計4回〜最大30回まで受講可能
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#27a045"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            例：プライベートレッスン8回＋コーチング4回＝合計12回　など
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#27a045"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            もちろん1つのコースのみで全回数を受講することも可能
-          </li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>プライベートレッスンとコーチングコースは好きな回数ずつ組み合わせて受講可能</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>ハイブリッド受講希望の場合：合計4回〜最大30回まで受講可能</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>例：プライベートレッスン8回＋コーチング4回＝合計12回　など</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>もちろん1つのコースのみで全回数を受講することも可能</li>
         </ul>
       </div>
     </div>
@@ -840,293 +842,234 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
 </section>
 
 <!-- CAMPAIGN -->
-<section class="campaign">
+<section class="sec" style="background:var(--surface);">
   <div class="container">
     <div class="tc">
-      <div class="sec-summer-tag">🌊 期間限定</div>
-      <div class="sec-eyebrow">CAMPAIGN</div>
-      <h2 class="sec-title">夏期講習 <span class="accent">特別キャンペーン</span></h2>
-      <p class="sec-desc">この夏だけの特別な特典をご用意しています。お見逃しなく！</p>
+      <span class="badge badge-gold" style="margin-bottom:14px;">🌊 期間限定</span>
+      <div class="eyebrow">CAMPAIGN</div>
+      <h2 class="sec-title">夏期講習 <span class="hl">特別キャンペーン</span></h2>
+      <p class="sec-lead">この夏だけの特別な特典をご用意しています。お見逃しなく！</p>
     </div>
-    <div class="campaign-grid">
+    <div class="camp-grid">
       <div class="camp-card reveal">
-        <div class="camp-card-ribbon">限定特典</div>
-        <div class="camp-icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3 class="camp-title">早期申込特典</h3>
-        <p class="camp-desc">
-          <span class="camp-highlight">授業2回分 無料！</span><br>
-          7月20日(日)までのお申込みで、授業2コマ分をプレゼント。早めの行動が大きなアドバンテージに。
-        </p>
+        <div class="camp-ribbon">限定特典</div>
+        <div class="camp-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 class="camp-name">早期申込特典</h3>
+        <p class="camp-body"><span class="camp-hl">授業2回分 無料！</span><br>7月20日(日)までのお申込みで、授業2コマ分をプレゼント。早めの行動が大きなアドバンテージに。</p>
       </div>
-      <div class="camp-card reveal">
-        <div class="camp-card-ribbon">限定特典</div>
-        <div class="camp-icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#fff" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <h3 class="camp-title">紹介特典</h3>
-        <p class="camp-desc">
-          <span class="camp-highlight">授業2回分 無料！</span><br>
-          既存の塾生からのご紹介でお申込みいただいた方に、授業2コマ分をプレゼントします。
-        </p>
-        <p class="camp-note">※別途紹介コードを入塾時にお伝えいただくことが条件です</p>
+      <div class="camp-card reveal d2">
+        <div class="camp-ribbon">限定特典</div>
+        <div class="camp-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#fff" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3 class="camp-name">紹介特典</h3>
+        <p class="camp-body"><span class="camp-hl">授業2回分 無料！</span><br>既存の塾生からのご紹介でお申込みいただいた方に、授業2コマ分をプレゼントします。</p>
+        <p class="camp-foot">※別途紹介コードを入塾時にお伝えいただくことが条件です</p>
       </div>
-      <div class="camp-card reveal">
-        <div class="camp-card-ribbon">夏期限定</div>
-        <div class="camp-icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M20 12V22H4V12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 7H2v5h20V7z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3 class="camp-title">入塾金無料</h3>
-        <p class="camp-desc">
-          <span class="camp-highlight">通常¥11,000 → 無料！</span><br>
-          夏期講習のお申込みに限り、入塾金が完全無料。この機会にぜひご入塾ください。
-        </p>
+      <div class="camp-card reveal d3">
+        <div class="camp-ribbon">夏期限定</div>
+        <div class="camp-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M20 12V22H4V12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 7H2v5h20V7z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 class="camp-name">入塾金無料</h3>
+        <p class="camp-body"><span class="camp-hl">通常¥11,000 → 無料！</span><br>夏期講習のお申込みに限り、入塾金が完全無料。この機会にぜひご入塾ください。</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- RESULTS -->
-<section class="results">
+<section class="sec">
   <div class="container">
     <div class="tc">
-      <div class="sec-eyebrow">RESULTS</div>
-      <h2 class="sec-title">直近2年の <span class="accent">合格実績</span></h2>
-      <p class="sec-desc">Bースタディ生の頑張りが、これだけの結果につながっています。</p>
+      <div class="eyebrow">RESULTS</div>
+      <h2 class="sec-title">直近2年の <span class="hl">合格実績</span></h2>
+      <p class="sec-lead">Bースタディ生の頑張りが、これだけの結果につながっています。</p>
     </div>
-    <div class="results-grid" style="margin-top:48px;">
+    <div class="results-grid">
       <div class="result-card reveal">
-        <div class="result-card-head">
-          <div class="result-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#fff"/></svg>
-          </div>
-          <div>
-            <div class="result-card-title">大学受験【国公立】</div>
-            <div class="result-card-sub">難関国公立大学への合格実績</div>
-          </div>
+        <div class="rc-head">
+          <div class="rc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#fff"/></svg></div>
+          <div><div class="rc-title">大学受験【国公立】</div><div class="rc-sub">難関国公立大学への合格実績</div></div>
         </div>
-        <div class="result-tags">
-          <span class="result-tag">大阪大学（医）</span>
-          <span class="result-tag">新潟大学（医）</span>
-          <span class="result-tag">岡山大学（教育）</span>
-          <span class="result-tag">徳島大学（薬）</span>
-          <span class="result-tag">鳥取大学（農）</span>
-          <span class="result-tag">神戸大学（文）</span>
-          <span class="result-tag">滋賀大学（経済）</span>
-          <span class="result-tag">香川大学（法）</span>
-          <span class="result-tag">高知大学（人文社会）</span>
-          <span class="result-tag">下関市立大学（経済）</span>
-          <span class="result-tag">長崎県立大学（経営）</span>
-          <span class="result-tag">都留文科大学（教育）</span>
+        <div class="rc-tags">
+          <span class="rc-tag hi">大阪大学（医）</span><span class="rc-tag hi">新潟大学（医）</span>
+          <span class="rc-tag">岡山大学（教育）</span><span class="rc-tag">徳島大学（薬）</span>
+          <span class="rc-tag">鳥取大学（農）</span><span class="rc-tag">神戸大学（文）</span>
+          <span class="rc-tag">滋賀大学（経済）</span><span class="rc-tag">香川大学（法）</span>
+          <span class="rc-tag">高知大学（人文社会）</span><span class="rc-tag">下関市立大学（経済）</span>
+          <span class="rc-tag">長崎県立大学（経営）</span><span class="rc-tag">都留文科大学（教育）</span>
+        </div>
+      </div>
+      <div class="result-card reveal d2">
+        <div class="rc-head">
+          <div class="rc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#fff"/></svg></div>
+          <div><div class="rc-title">大学受験【私立】</div><div class="rc-sub">有名私立大学への合格実績</div></div>
+        </div>
+        <div class="rc-tags">
+          <span class="rc-tag hi">同志社大学（文）</span><span class="rc-tag">立命館大学（法・他）</span>
+          <span class="rc-tag">関西大学（法・他）</span><span class="rc-tag">関西学院大学（文）</span>
+          <span class="rc-tag">甲南大学（マネジメント創造）</span><span class="rc-tag">京都産業大学（経済・他）</span>
+          <span class="rc-tag">龍谷大学（経済・他）</span><span class="rc-tag">近畿大学（農）</span>
+          <span class="rc-tag">神戸学院大学（GC）</span><span class="rc-tag">摂南大学（建築）</span>
+          <span class="rc-tag">神戸女子大学（文）</span><span class="rc-tag">就実大学（教育）</span>
+          <span class="rc-tag">甲南女子大学（文）</span><span class="rc-tag">神戸松蔭大学（文）</span>
+          <span class="rc-tag">鳥取短期大学（生活科学）</span>
         </div>
       </div>
       <div class="result-card reveal">
-        <div class="result-card-head">
-          <div class="result-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#fff"/></svg>
-          </div>
-          <div>
-            <div class="result-card-title">大学受験【私立】</div>
-            <div class="result-card-sub">有名私立大学への合格実績</div>
-          </div>
+        <div class="rc-head">
+          <div class="rc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12v5c3 3 9 3 12 0v-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><div class="rc-title">高校受験</div><div class="rc-sub">県内外の高校への合格実績</div></div>
         </div>
-        <div class="result-tags">
-          <span class="result-tag">同志社大学（文）</span>
-          <span class="result-tag">立命館大学（法・他）</span>
-          <span class="result-tag">関西大学（法・他）</span>
-          <span class="result-tag">関西学院大学（文）</span>
-          <span class="result-tag">甲南大学（マネジメント創造）</span>
-          <span class="result-tag">京都産業大学（経済・他）</span>
-          <span class="result-tag">龍谷大学（経済・他）</span>
-          <span class="result-tag">近畿大学（農）</span>
-          <span class="result-tag">神戸学院大学（GC）</span>
-          <span class="result-tag">摂南大学（建築）</span>
-          <span class="result-tag">鳥取短期大学（生活科学）</span>
-          <span class="result-tag">神戸女子大学（文）</span>
-          <span class="result-tag">就実大学（教育）</span>
-          <span class="result-tag">甲南女子大学（文）</span>
-          <span class="result-tag">神戸松蔭大学（文）</span>
+        <div class="rc-tags">
+          <span class="rc-tag hi">米子東高校 生命科学科</span><span class="rc-tag">倉吉東高校</span>
+          <span class="rc-tag">倉吉西高校</span><span class="rc-tag">鳥取中央育英高校</span>
+          <span class="rc-tag">倉吉北高校</span><span class="rc-tag">県外私立高校</span>
         </div>
       </div>
-      <div class="result-card reveal">
-        <div class="result-card-head">
-          <div class="result-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12v5c3 3 9 3 12 0v-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div>
-            <div class="result-card-title">高校受験</div>
-            <div class="result-card-sub">県内外の高校への合格実績</div>
-          </div>
+      <div class="result-card reveal d2">
+        <div class="rc-head">
+          <div class="rc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12v5c3 3 9 3 12 0v-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><div class="rc-title">中学受験</div><div class="rc-sub">中学受験の合格実績</div></div>
         </div>
-        <div class="result-tags">
-          <span class="result-tag">県外私立高校</span>
-          <span class="result-tag">米子東高校 生命科学科</span>
-          <span class="result-tag">倉吉東高校</span>
-          <span class="result-tag">倉吉西高校</span>
-          <span class="result-tag">鳥取中央育英高校</span>
-          <span class="result-tag">倉吉北高校</span>
-        </div>
-      </div>
-      <div class="result-card reveal">
-        <div class="result-card-head">
-          <div class="result-card-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12v5c3 3 9 3 12 0v-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div>
-            <div class="result-card-title">中学受験</div>
-            <div class="result-card-sub">中学受験の合格実績</div>
-          </div>
-        </div>
-        <div class="result-tags">
-          <span class="result-tag">湯梨浜学園中学</span>
-        </div>
+        <div class="rc-tags"><span class="rc-tag hi">湯梨浜学園中学</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- VOICES -->
-<section class="voices">
+<section class="sec" style="background:var(--surface);">
   <div class="container">
     <div class="tc">
-      <div class="sec-eyebrow">VOICES</div>
-      <h2 class="sec-title">合格者の <span class="accent">声</span></h2>
-      <p class="sec-desc">Bースタディで合格を勝ち取った先輩たちのメッセージです。</p>
+      <div class="eyebrow">VOICES</div>
+      <h2 class="sec-title">合格者の <span class="hl">声</span></h2>
+      <p class="sec-lead">Bースタディで合格を勝ち取った先輩たちのメッセージです。</p>
     </div>
-    <div class="voices-grid" style="margin-top:48px;">
+    <div class="voices-grid">
       <div class="voice-card reveal">
-        <p class="voice-text">「苦手だった数学を集中的に対策してもらい、志望校に合格できました。先生が丁寧に質問に答えてくれるので、授業外でも自習室でどんどん進められました。本当に感謝しています。」</p>
+        <div class="voice-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+        </div>
+        <p class="voice-text">苦手だった数学を集中的に対策してもらい、志望校に合格できました。先生が丁寧に質問に答えてくれるので、授業外でも自習室でどんどん進められました。本当に感謝しています。</p>
         <div class="voice-meta">
-          <div class="voice-avatar">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#fff" stroke-width="2"/></svg>
-          </div>
-          <div>
-            <div class="voice-name">K.Mさん</div>
-            <div class="voice-grade">倉吉東高校 合格</div>
-          </div>
+          <div class="voice-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#fff" stroke-width="2"/></svg></div>
+          <div><div class="voice-name">K.Mさん</div><div class="voice-grade">倉吉東高校 合格</div></div>
         </div>
       </div>
-      <div class="voice-card reveal">
-        <p class="voice-text">「自分のペースで学べる環境が最高でした。コーチングで目標の立て方から教えてもらい、毎日の勉強習慣が身につきました。大学受験でも引き続きお世話になっています。」</p>
+      <div class="voice-card reveal d2">
+        <div class="voice-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+        </div>
+        <p class="voice-text">自分のペースで学べる環境が最高でした。コーチングで目標の立て方から教えてもらい、毎日の勉強習慣が身につきました。大学受験でも引き続きお世話になっています。</p>
         <div class="voice-meta">
-          <div class="voice-avatar">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#fff" stroke-width="2"/></svg>
-          </div>
-          <div>
-            <div class="voice-name">S.Tさん</div>
-            <div class="voice-grade">岡山大学（教育） 合格</div>
-          </div>
+          <div class="voice-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#fff" stroke-width="2"/></svg></div>
+          <div><div class="voice-name">S.Tさん</div><div class="voice-grade">岡山大学（教育） 合格</div></div>
         </div>
       </div>
-      <div class="voice-card reveal">
-        <p class="voice-text">「夏期講習だけのつもりでしたが、先生の熱心な指導に惹かれてそのまま通い続けました。参考書も自由に使えるし、自習室で勉強仲間もできて、充実した毎日でした。」</p>
+      <div class="voice-card reveal d3">
+        <div class="voice-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
+        </div>
+        <p class="voice-text">夏期講習だけのつもりでしたが、先生の熱心な指導に惹かれてそのまま通い続けました。参考書も自由に使えるし、自習室で勉強仲間もできて、充実した毎日でした。</p>
         <div class="voice-meta">
-          <div class="voice-avatar">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#fff" stroke-width="2"/></svg>
-          </div>
-          <div>
-            <div class="voice-name">A.Nさん</div>
-            <div class="voice-grade">同志社大学 合格</div>
-          </div>
+          <div class="voice-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#fff" stroke-width="2"/></svg></div>
+          <div><div class="voice-name">A.Nさん</div><div class="voice-grade">同志社大学 合格</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROMISE BANNER -->
-<div class="promise">
+<!-- PROMISE -->
+<section class="promise-sec">
   <div class="promise-bg"></div>
-  <div class="promise-overlay"></div>
-  <div class="container promise-inner reveal">
+  <div class="promise-deco"></div>
+  <div class="promise-inner reveal">
+    <span class="badge badge-white" style="margin-bottom:24px;">OUR PROMISE</span>
     <div class="promise-quote">学びを通して、<em>「自己実現」</em>を追求する。</div>
-    <p class="promise-sub">あなたの可能性を最大限に引き出すために。<br>一人ひとりに寄り添い、夢への道を一緒に歩みます。</p>
-    <a href="https://manabiya-bstudy.netlify.app/" class="btn-yellow btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#1c1c1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#1c1c1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>教室見学・無料体験授業申込フォーム</a>
+    <p class="promise-body">あなたの可能性を最大限に引き出すために。<br>一人ひとりに寄り添い、夢への道を一緒に歩みます。</p>
+    <a href="https://manabiya-bstudy.netlify.app/" class="btn-gold-lg">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      教室見学・無料体験授業申込フォーム
+    </a>
   </div>
-</div>
+</section>
 
 <!-- FLOW -->
-<section class="flow">
+<section class="sec">
   <div class="container">
     <div class="tc">
-      <div class="sec-eyebrow">APPLICATION FLOW</div>
-      <h2 class="sec-title">お申し込みの <span class="accent">流れ</span></h2>
-      <p class="sec-desc">簡単4ステップで夏期講習がスタートできます。</p>
+      <div class="eyebrow">HOW TO APPLY</div>
+      <h2 class="sec-title">お申し込みの <span class="hl">流れ</span></h2>
+      <p class="sec-lead">簡単4ステップで夏期講習がスタートできます。</p>
     </div>
     <div class="flow-steps">
       <div class="flow-step reveal">
-        <div class="flow-step-num">
-          1
-          <div class="flow-step-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#27a045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#27a045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
+        <div class="flow-num">1
+          <div class="flow-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
-        <h4 class="flow-step-title">申込フォーム記入</h4>
-        <p class="flow-step-desc">下記フォームからお気軽にお申し込みください。</p>
-        <a href="https://manabiya-bstudy.netlify.app/" class="flow-step-link">フォームはこちら →</a>
+        <h4 class="flow-title">申込フォーム記入</h4>
+        <p class="flow-desc">下記フォームからお気軽にお申し込みください。</p>
+        <a href="https://manabiya-bstudy.netlify.app/" class="flow-link">フォームはこちら →</a>
       </div>
-      <div class="flow-step reveal">
-        <div class="flow-step-num">
-          2
-          <div class="flow-step-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#27a045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
+      <div class="flow-step reveal d2">
+        <div class="flow-num">2
+          <div class="flow-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
-        <h4 class="flow-step-title">無料カウンセリング</h4>
-        <p class="flow-step-desc">現状の学力・目標・希望をじっくりお聞きします。</p>
+        <h4 class="flow-title">無料カウンセリング</h4>
+        <p class="flow-desc">現状の学力・目標・希望をじっくりお聞きします。</p>
       </div>
-      <div class="flow-step reveal">
-        <div class="flow-step-num">
-          3
-          <div class="flow-step-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke="#27a045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="#27a045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
+      <div class="flow-step reveal d3">
+        <div class="flow-num">3
+          <div class="flow-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
-        <h4 class="flow-step-title">受講プラン決定</h4>
-        <p class="flow-step-desc">最適なコース・回数をご提案し、プランを確定します。</p>
+        <h4 class="flow-title">受講プラン決定</h4>
+        <p class="flow-desc">最適なコース・回数をご提案し、プランを確定します。</p>
       </div>
-      <div class="flow-step reveal">
-        <div class="flow-step-num">
-          4
-          <div class="flow-step-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#27a045"/></svg>
-          </div>
+      <div class="flow-step reveal d4">
+        <div class="flow-num">4
+          <div class="flow-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#16a34a"/></svg></div>
         </div>
-        <h4 class="flow-step-title">夏期講習スタート！</h4>
-        <p class="flow-step-desc">いよいよ夏期講習の開始。全力でサポートします！</p>
+        <h4 class="flow-title">夏期講習スタート！</h4>
+        <p class="flow-desc">いよいよ夏期講習の開始。全力でサポートします！</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PRINCIPAL -->
-<section class="principal">
+<section class="sec" style="background:var(--surface);">
   <div class="container">
     <div class="tc">
-      <div class="sec-eyebrow">PRINCIPAL</div>
-      <h2 class="sec-title">塾長 <span class="accent">メッセージ</span></h2>
+      <div class="eyebrow">PRINCIPAL</div>
+      <h2 class="sec-title">塾長 <span class="hl">メッセージ</span></h2>
     </div>
-    <div class="principal-inner">
-      <div class="principal-photo reveal-left">
+    <div class="principal-grid">
+      <div class="principal-photo reveal-l">
         <img src="assets/principal.jpg" alt="橋本英武 塾長">
-        <div class="principal-photo-badge">橋本 英武 塾長</div>
+        <div class="principal-badge">橋本 英武 塾長</div>
       </div>
-      <div class="reveal-right">
+      <div class="reveal-r">
         <div class="principal-name">橋本 英武</div>
-        <div class="principal-role">Bースタディ 塾長</div>
-        <p class="principal-msg">
-          「勉強が苦手」「やる気が出ない」「どう勉強したらいいかわからない」——そんな悩みを持つ生徒たちと向き合ってきました。<br><br>
-          大切にしているのは、一人ひとりの「今」を見ることです。どんな小さな進歩も認め、自信へと変えていく。その積み重ねが、大きな結果につながると信じています。<br><br>
-          この夏、本気で変わりたいと思っている皆さんを、全力でサポートします。一緒に、最高の夏にしましょう。
-        </p>
+        <div class="principal-role">塾長 / MANABIYA Bースタディ</div>
+        <p class="principal-msg">「勉強が苦手」「やる気が出ない」「どう勉強したらいいかわからない」——そんな悩みを持つ生徒たちと向き合ってきました。<br><br>大切にしているのは、一人ひとりの「今」を見ることです。どんな小さな進歩も認め、自信へと変えていく。その積み重ねが、大きな結果につながると信じています。<br><br>この夏、本気で変わりたいと思っている皆さんを、全力でサポートします。一緒に、最高の夏にしましょう。</p>
         <ul class="principal-career">
           <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#27a045"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             国公立大学・難関私立大学への合格実績多数
           </li>
           <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#27a045"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             個別最適化指導・コーチング指導の専門家
           </li>
         </ul>
@@ -1136,114 +1079,95 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
 </section>
 
 <!-- ACCESS -->
-<section class="access">
+<section class="sec">
   <div class="container">
     <div class="tc">
-      <div class="sec-eyebrow">ACCESS</div>
-      <h2 class="sec-title">教室への <span class="accent">アクセス</span></h2>
+      <div class="eyebrow">ACCESS</div>
+      <h2 class="sec-title">教室への <span class="hl">アクセス</span></h2>
     </div>
     <div class="access-grid">
-      <div class="access-info-cards reveal-left">
-        <div class="access-info-card">
-          <div class="access-info-card-label">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#27a045" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#27a045" stroke-width="2"/></svg>
-            住所
-          </div>
-          <div class="access-info-card-val">鳥取県倉吉市海田西町2丁目95<br><small style="font-size:13px;color:var(--text-muted);">駐車場約10台分あり</small></div>
+      <div class="access-info reveal-l">
+        <div class="access-card">
+          <div class="access-lbl"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#16a34a" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#16a34a" stroke-width="2"/></svg>住所</div>
+          <div class="access-val">鳥取県倉吉市海田西町2丁目95<br><small style="font-size:13px;color:var(--ink-4);">駐車場約10台分あり</small></div>
         </div>
-        <div class="access-info-card">
-          <div class="access-info-card-label">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#27a045" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#27a045" stroke-width="2" stroke-linecap="round"/></svg>
-            営業時間
-          </div>
-          <div class="access-info-card-val">10:00〜22:00<br><small style="font-size:12px;color:var(--text-muted);">※ただし夏期講習期間中に限る</small></div>
+        <div class="access-card">
+          <div class="access-lbl"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#16a34a" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/></svg>営業時間</div>
+          <div class="access-val">10:00〜22:00<br><small style="font-size:12px;color:var(--ink-4);">※夏期講習期間中に限る</small></div>
         </div>
-        <div class="access-info-card">
-          <div class="access-info-card-label">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.42 2 2 0 0 1 3.62 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="#27a045" stroke-width="2"/></svg>
-            電話番号
-          </div>
-          <div class="access-info-card-val"><a href="tel:0858271991">0858-27-1991</a><br><small style="font-size:13px;color:var(--text-muted);">電話受付：月〜金 16:00〜21:00</small></div>
+        <div class="access-card">
+          <div class="access-lbl"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.42 2 2 0 0 1 3.62 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="#16a34a" stroke-width="2"/></svg>電話番号</div>
+          <div class="access-val"><a href="tel:0858271991">0858-27-1991</a><br><small style="font-size:13px;color:var(--ink-4);">電話受付：月〜金 16:00〜21:00</small></div>
         </div>
-        <div class="access-info-card">
-          <div class="access-info-card-label">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#27a045" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="#27a045" stroke-width="2"/></svg>
-            メールアドレス
-          </div>
-          <div class="access-info-card-val"><a href="mailto:manabiya.b-study@outlook.jp">manabiya.b-study@outlook.jp</a></div>
+        <div class="access-card">
+          <div class="access-lbl"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#16a34a" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="#16a34a" stroke-width="2"/></svg>メールアドレス</div>
+          <div class="access-val"><a href="mailto:manabiya.b-study@outlook.jp">manabiya.b-study@outlook.jp</a></div>
         </div>
-        <div class="access-info-card">
-          <div class="access-info-card-label">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#27a045" stroke-width="2"/><circle cx="12" cy="7" r="4" stroke="#27a045" stroke-width="2"/></svg>
-            代表
-          </div>
-          <div class="access-info-card-val">橋本 英武</div>
+        <div class="access-card">
+          <div class="access-lbl"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#16a34a" stroke-width="2"/><circle cx="12" cy="7" r="4" stroke="#16a34a" stroke-width="2"/></svg>代表</div>
+          <div class="access-val">橋本 英武</div>
         </div>
       </div>
-      <div class="access-map reveal-right">
-        <iframe
-          src="https://maps.google.com/maps?q=%E9%B3%A5%E5%8F%96%E7%9C%8C%E5%80%89%E5%90%89%E5%B8%82%E6%B5%B7%E7%94%B0%E8%A5%BF%E7%94%BA2%E4%B8%81%E7%9B%AE95&output=embed&hl=ja&z=16"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          title="MANABIYA Bースタディ 地図">
-        </iframe>
+      <div class="access-map reveal-r">
+        <iframe src="https://maps.google.com/maps?q=%E9%B3%A5%E5%8F%96%E7%9C%8C%E5%80%89%E5%90%89%E5%B8%82%E6%B5%B7%E7%94%B0%E8%A5%BF%E7%94%BA2%E4%B8%81%E7%9B%AE95&output=embed&hl=ja&z=16" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="MANABIYA Bースタディ 地図"></iframe>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="faq">
+<section class="sec" style="background:var(--surface);">
   <div class="container">
     <div class="tc">
-      <div class="sec-eyebrow">FAQ</div>
-      <h2 class="sec-title">よくある <span class="accent">ご質問</span></h2>
+      <div class="eyebrow">FAQ</div>
+      <h2 class="sec-title">よくある <span class="hl">ご質問</span></h2>
     </div>
-    <div class="faq-list" style="max-width:820px;margin:48px auto 0;">
+    <div class="faq-list">
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-ico">Q</div>
+          <div class="faq-q-mark">Q</div>
           <div class="faq-q-text">授業の振替はできますか？</div>
-          <svg class="faq-q-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-a">はい、振替制度を完備しています。事前にご連絡いただければ、ご都合の良い日時に振り替えることができます。年中無休で開校していますので、柔軟に対応可能です。</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-ico">Q</div>
+          <div class="faq-q-mark">Q</div>
           <div class="faq-q-text">自習室はいつでも使えますか？</div>
-          <svg class="faq-q-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-a">夏期講習にお申し込みいただいた方は、営業時間内であればいつでも自習室をご利用いただけます。夏期講習期間中（2026年7月1日〜8月31日）は毎日10:00〜22:00でご利用いただけます。</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-ico">Q</div>
+          <div class="faq-q-mark">Q</div>
           <div class="faq-q-text">複数のコースを組み合わせることはできますか？</div>
-          <svg class="faq-q-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-a">プライベートレッスンとコーチングをハイブリッドで受講することが可能です。合計4回〜最大30回まで、好きな回数ずつ組み合わせてご利用いただけます。詳しくはお気軽にご相談ください。</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-ico">Q</div>
+          <div class="faq-q-mark">Q</div>
           <div class="faq-q-text">入塾金はかかりますか？</div>
-          <svg class="faq-q-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-a">夏期講習のお申し込みに限り、通常¥11,000（税込）の入塾金が無料となります。この機会にぜひご入塾ください。</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-ico">Q</div>
+          <div class="faq-q-mark">Q</div>
           <div class="faq-q-text">どの教科でも対応していますか？</div>
-          <svg class="faq-q-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-a">はい、国語・算数・数学・英語・理科・社会など全教科に対応しています。小学1年生から高校3年生まで幅広く対応しておりますので、お気軽にご相談ください。</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
-          <div class="faq-q-ico">Q</div>
+          <div class="faq-q-mark">Q</div>
           <div class="faq-q-text">体験授業は無料ですか？</div>
-          <svg class="faq-q-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="faq-a">はい、無料体験授業を実施しています。まずは教室の雰囲気を見ていただき、講師との相性や指導スタイルをご確認ください。お申し込みはフォームから承っております。</div>
       </div>
@@ -1252,32 +1176,30 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
+<section class="contact-sec">
   <div class="container contact-inner reveal">
     <h2 class="contact-title">この夏、<em>Bースタディで変わりませんか？</em></h2>
-    <p class="contact-sub">まずはお気軽に教室見学・無料体験授業へ。<br>あなたの目標に合ったプランを一緒に考えます。</p>
-    <div class="contact-tel">
-      <a href="tel:0858271991">0858-27-1991</a>
-    </div>
-    <div class="contact-tel-label">電話受付：月〜金 16:00〜21:00</div>
-    <a href="https://manabiya-bstudy.netlify.app/" class="btn-yellow-lg btn-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#1c1c1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#1c1c1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>教室見学・無料体験授業申込フォーム</a>
-    <div class="contact-addr">
-      〒682-0812 鳥取県倉吉市海田西町2丁目95<br>
-      manabiya.b-study@outlook.jp
-    </div>
+    <p class="contact-lead">まずはお気軽に教室見学・無料体験授業へ。<br>あなたの目標に合ったプランを一緒に考えます。</p>
+    <div class="contact-tel"><a href="tel:0858271991">0858-27-1991</a></div>
+    <div class="contact-tel-note">電話受付：月〜金 16:00〜21:00</div>
+    <a href="https://manabiya-bstudy.netlify.app/" class="btn-gold-lg">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      教室見学・無料体験授業申込フォーム
+    </a>
+    <div class="contact-addr">〒682-0812 鳥取県倉吉市海田西町2丁目95<br>manabiya.b-study@outlook.jp</div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-          <img src="assets/logo.png" alt="ロゴ" style="height:36px;width:36px;object-fit:contain;border-radius:6px;background:#fff;padding:2px;">
-          <div class="footer-brand" style="margin-bottom:0;">MANABIYA Bースタディ</div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="ロゴ" class="footer-logo">
+          <div class="footer-name">MANABIYA Bースタディ</div>
         </div>
-        <div class="footer-addr">
+        <div class="footer-contact">
           〒682-0812 鳥取県倉吉市海田西町2丁目95<br>
           TEL: 0858-27-1991<br>
           manabiya.b-study@outlook.jp<br>
@@ -1285,69 +1207,75 @@ footer{background:#0e2917;padding:40px 24px 24px;color:rgba(255,255,255,0.65);}
         </div>
       </div>
       <div>
-        <a href="https://manabiya-bstudy.netlify.app/" class="btn-yellow" style="font-size:13px;padding:12px 24px;">教室見学・体験授業申込</a>
+        <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-gold" style="font-size:13px;">教室見学・体験授業申込</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      © 2026 MANABIYA Bースタディ. All rights reserved.
-    </div>
+    <div class="footer-bottom">© 2026 MANABIYA Bースタディ. All rights reserved.</div>
   </div>
 </footer>
 
-<!-- MOBILE FLOAT CTA -->
-<div class="mobile-float-cta">
+<!-- MOBILE CTA -->
+<div class="mob-cta">
   <a href="https://manabiya-bstudy.netlify.app/">無料体験申込フォームへ →</a>
 </div>
 
 <script>
-// Hero slideshow with dot nav
-var _heroSlides = document.querySelectorAll('.hero-slide');
-var _heroDots = document.querySelectorAll('.hero-dot');
-var _heroCur = 0;
-function gotoSlide(idx){
-  _heroSlides[_heroCur].classList.remove('active');
-  _heroDots[_heroCur].classList.remove('active');
-  _heroCur = idx;
-  _heroSlides[_heroCur].classList.add('active');
-  _heroDots[_heroCur].classList.add('active');
-}
-if(_heroSlides.length > 1){
-  setInterval(function(){ gotoSlide((_heroCur+1) % _heroSlides.length); }, 3000);
+// === SLIDESHOW ===
+var slides=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.hpg-dot'),cur=0;
+function gotoSlide(i){slides[cur].classList.remove('active');dots[cur].classList.remove('active');cur=i;slides[cur].classList.add('active');dots[cur].classList.add('active');}
+if(slides.length>1)setInterval(function(){gotoSlide((cur+1)%slides.length);},4200);
+
+// === TABS ===
+function switchTab(i){
+  document.querySelectorAll('.tab-btn').forEach(function(b,j){b.classList.toggle('active',j===i);});
+  document.querySelectorAll('.tab-panel').forEach(function(p,j){p.classList.toggle('active',j===i);});
 }
 
-// Tab switching
-function switchTab(idx) {
-  document.querySelectorAll('.tab-btn').forEach((b,i) => b.classList.toggle('active', i===idx));
-  document.querySelectorAll('.tab-panel').forEach((p,i) => p.classList.toggle('active', i===idx));
+// === FAQ ===
+function toggleFaq(el){
+  var item=el.closest('.faq-item'),was=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
+  if(!was)item.classList.add('open');
 }
 
-// FAQ toggle
-function toggleFaq(el) {
-  const item = el.closest('.faq-item');
-  const wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!wasOpen) item.classList.add('open');
+// === SCROLL REVEAL ===
+var revObs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');revObs.unobserve(e.target);}});
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(function(el){revObs.observe(el);});
+
+// === HEADER SCROLL ===
+var hdr=document.getElementById('site-header');
+window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>20);},{passive:true});
+
+// === COUNTDOWN (to July 20 early-bird deadline) ===
+function updateCD(){
+  var target=new Date('2026-07-20T23:59:59+09:00'),diff=target-new Date();
+  if(diff<=0){document.querySelector('.hero-countdown').style.display='none';return;}
+  var d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000);
+  document.getElementById('cd-d').textContent=String(d).padStart(2,'0');
+  document.getElementById('cd-h').textContent=String(h).padStart(2,'0');
+  document.getElementById('cd-m').textContent=String(m).padStart(2,'0');
 }
+updateCD();setInterval(updateCD,30000);
 
-// Scroll reveal
-const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      revealObs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-revealEls.forEach(el => revealObs.observe(el));
-
-// Header scroll shadow
-const header = document.querySelector('header');
-window.addEventListener('scroll', () => {
-  header.style.boxShadow = window.scrollY > 10
-    ? '0 2px 20px rgba(39,160,69,0.15)'
-    : '0 1px 0 rgba(0,0,0,0.08),0 4px 24px rgba(39,160,69,0.08)';
-}, {passive:true});
+// === STAT COUNTER ===
+function countUp(el){
+  var target=parseInt(el.dataset.target,10);
+  var unit=el.querySelector('.stat-unit');
+  var unitHTML=unit?unit.outerHTML:'';
+  var start=performance.now(),dur=1400;
+  function step(now){
+    var p=Math.min((now-start)/dur,1),e=1-Math.pow(1-p,3);
+    el.innerHTML=Math.round(e*target)+unitHTML;
+    if(p<1)requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+var cntObs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){countUp(e.target);cntObs.unobserve(e.target);}});
+},{threshold:0.5});
+document.querySelectorAll('[data-target]').forEach(function(el){cntObs.observe(el);});
 </script>
 </body>
 </html>
