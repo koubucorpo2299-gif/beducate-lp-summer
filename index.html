@@ -78,8 +78,8 @@ button{font-family:inherit;}
 .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.8s ease;}
 .hero-slide.active{opacity:1;}
 .hero-slide img{width:100%;height:100%;object-fit:cover;}
-.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(108deg,rgba(7,28,13,.92) 0%,rgba(13,59,34,.8) 40%,rgba(21,93,54,.5) 70%,transparent 100%);}
-.hero-overlay-b{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(7,28,13,.65) 0%,transparent 50%);}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(108deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.45) 45%,rgba(0,0,0,.25) 75%,rgba(0,0,0,.1) 100%);}
+.hero-overlay-b{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(0,0,0,.5) 0%,transparent 45%);}
 .hero-dot-pattern{position:absolute;inset:0;z-index:1;opacity:.06;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:32px 32px;}
 
 .hero-sun{position:absolute;right:-80px;top:-80px;width:540px;height:540px;z-index:2;pointer-events:none;}
@@ -100,7 +100,7 @@ button{font-family:inherit;}
 .hpg-dot{width:8px;height:8px;border-radius:4px;background:rgba(255,255,255,.4);cursor:pointer;transition:all .4s var(--ease);}
 .hpg-dot.active{width:28px;background:#fff;}
 
-.hero-inner{position:relative;z-index:3;width:100%;max-width:1160px;margin:0 auto;padding:60px 24px 100px;display:grid;grid-template-columns:1fr 370px;gap:44px;align-items:center;}
+.hero-inner{position:relative;z-index:3;width:100%;max-width:860px;margin:0 auto;padding:60px 24px 100px;}
 .hero-tag{display:inline-flex;align-items:center;gap:7px;background:var(--gold);color:var(--ink);font-size:11.5px;font-weight:900;padding:7px 18px;border-radius:9999px;margin-bottom:28px;box-shadow:0 6px 22px rgba(245,158,11,.48);animation:fadeUp .55s ease both;letter-spacing:.02em;}
 .hero-h1{font-size:clamp(30px,5.5vw,68px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.03em;margin-bottom:28px;text-shadow:0 4px 30px rgba(0,0,0,.45);animation:fadeUp .6s .08s ease both;}
 .hero-h1 em{color:var(--gold);font-style:normal;}
@@ -109,25 +109,16 @@ button{font-family:inherit;}
 .hp-label{font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.24em;text-transform:uppercase;margin-bottom:6px;}
 .hp-date{font-size:clamp(14px,1.9vw,18px);font-weight:800;color:#fff;}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .6s .24s ease both;}
-
-.hero-card{background:rgba(13,59,34,.82);border:1px solid rgba(255,255,255,.18);border-radius:28px;padding:30px 26px;backdrop-filter:blur(20px);animation:fadeRight .7s .2s ease both;}
-.hc-head{font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.24em;text-transform:uppercase;margin-bottom:22px;}
-.hc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.hc-item{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px 12px;text-align:center;transition:background var(--t) var(--ease);cursor:default;}
-.hc-item:hover{background:rgba(255,255,255,.18);}
-.hc-ico{display:flex;justify-content:center;margin-bottom:10px;}
-.hc-num{font-size:17px;font-weight:900;color:#fff;line-height:1;}
-.hc-lbl{font-size:10.5px;color:rgba(255,255,255,.65);margin-top:5px;}
-.hero-countdown{margin-top:18px;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.35);border-radius:14px;padding:14px 16px;}
-.hcd-title{font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.18em;margin-bottom:10px;text-align:center;}
-.hcd-units{display:flex;gap:6px;justify-content:center;align-items:flex-start;}
+.hero-cd-bar{display:inline-flex;align-items:center;gap:14px;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.4);border-radius:14px;padding:12px 20px;margin-top:24px;animation:fadeUp .6s .3s ease both;}
+.hero-cd-label{font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.16em;white-space:nowrap;}
+.hcd-units{display:flex;gap:6px;align-items:flex-start;}
 .hcd-unit{text-align:center;}
-.hcd-n{font-size:22px;font-weight:900;color:#fff;line-height:1;background:rgba(255,255,255,.12);padding:6px 10px;border-radius:8px;min-width:42px;display:block;}
-.hcd-l{font-size:9px;color:rgba(255,255,255,.5);margin-top:4px;letter-spacing:.1em;}
-.hcd-sep{font-size:22px;font-weight:900;color:rgba(255,255,255,.35);padding-top:6px;}
+.hcd-n{font-size:20px;font-weight:900;color:#fff;line-height:1;background:rgba(255,255,255,.15);padding:5px 10px;border-radius:8px;min-width:38px;display:block;}
+.hcd-l{font-size:9px;color:rgba(255,255,255,.55);margin-top:4px;letter-spacing:.1em;}
+.hcd-sep{font-size:20px;font-weight:900;color:rgba(255,255,255,.4);padding-top:5px;}
+
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeRight{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
 
 .wave{line-height:0;}
 .wave svg{display:block;width:100%;}
@@ -184,24 +175,31 @@ button{font-family:inherit;}
 .tt-eye{color:var(--gold);justify-content:center;}
 .tt-eye::before,.tt-eye::after{background:var(--gold);}
 .tt-overview{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:44px 0;}
-.tt-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:24px 20px;backdrop-filter:blur(8px);transition:background var(--t) var(--ease);}
-.tt-card:hover{background:rgba(255,255,255,.16);}
+.tt-card{background:#1a4a2e;border:1px solid #2d6b43;border-radius:20px;padding:24px 20px;transition:background var(--t) var(--ease);}
+.tt-card:hover{background:#1f5535;}
 .tt-card-ico{margin-bottom:12px;}
-.tt-card-lbl{font-size:12px;color:rgba(255,255,255,.65);font-weight:700;margin-bottom:6px;}
+.tt-card-lbl{font-size:12px;color:#a7d8b8;font-weight:700;margin-bottom:6px;}
 .tt-card-time{font-size:clamp(15px,1.8vw,20px);font-weight:900;color:#fff;}
-.tt-wrap{overflow-x:auto;border-radius:16px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.2) transparent;}
-.tt-wrap::-webkit-scrollbar{height:4px;}
-.tt-wrap::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:2px;}
-.tt-table{border-collapse:collapse;width:100%;min-width:640px;font-size:13px;}
-.tt-table thead th{background:rgba(255,255,255,.18);padding:13px 10px;text-align:center;font-weight:800;color:#fff;border:1px solid rgba(255,255,255,.1);white-space:nowrap;}
-.tt-table thead th:nth-child(2){text-align:left;min-width:130px;}
-.tt-table tbody td{padding:10px;text-align:center;border:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.8);white-space:nowrap;}
-.tt-table tbody td:first-child{background:rgba(255,255,255,.08);font-weight:700;}
-.tt-table tbody td:nth-child(2){text-align:left;font-size:12px;color:rgba(255,255,255,.6);}
-.tt-summer{background:rgba(245,158,11,.08);}
-.tt-slot{display:inline-block;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:800;}
-.tt-slot.open{background:rgba(34,197,94,.2);color:#86efac;border:1px solid rgba(34,197,94,.3);}
-.tt-hint{display:none;text-align:center;font-size:11.5px;color:rgba(255,255,255,.4);margin-top:10px;}
+.tt-scroll-outer{position:relative;}
+.tt-scroll-arrow{display:flex;align-items:center;justify-content:center;gap:8px;background:#1a4a2e;border-radius:10px;padding:8px 16px;margin-bottom:10px;color:#a7d8b8;font-size:12px;font-weight:700;letter-spacing:.05em;}
+.tt-wrap{overflow-x:auto;border-radius:16px;scrollbar-width:auto;scrollbar-color:#4ade80 #1a4a2e;cursor:grab;}
+.tt-wrap:active{cursor:grabbing;}
+.tt-wrap::-webkit-scrollbar{height:10px;}
+.tt-wrap::-webkit-scrollbar-track{background:#1a4a2e;border-radius:5px;}
+.tt-wrap::-webkit-scrollbar-thumb{background:#22c55e;border-radius:5px;}
+.tt-table{border-collapse:collapse;width:100%;min-width:680px;font-size:13px;}
+.tt-table thead th{background:#1a4a2e;padding:13px 14px;text-align:center;font-weight:800;color:#fff;border:1px solid #2d6b43;white-space:nowrap;}
+.tt-table thead th:nth-child(2){text-align:left;min-width:140px;}
+.tt-table tbody td{padding:10px 14px;text-align:center;border:1px solid #2d6b43;color:#e2f5e9;white-space:nowrap;background:#0d3b22;}
+.tt-table tbody td:first-child{background:#155d36;font-weight:800;color:#fff;}
+.tt-table tbody td:nth-child(2){text-align:left;font-size:12px;color:#a7d8b8;}
+.tt-table tbody tr:nth-child(even) td{background:#0f4228;}
+.tt-table tbody tr:nth-child(even) td:first-child{background:#155d36;}
+.tt-summer td{background:#1e3d10 !important;}
+.tt-summer td:first-child{background:#2d5a18 !important;}
+.tt-slot{display:inline-block;padding:5px 14px;border-radius:6px;font-size:12px;font-weight:800;}
+.tt-slot.open{background:#16a34a;color:#fff;}
+.tt-hint{display:none;text-align:center;font-size:12px;color:#a7d8b8;margin-top:8px;padding:8px;background:#1a4a2e;border-radius:8px;}
 
 /* COURSES */
 .tab-nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0;}
@@ -254,7 +252,7 @@ button{font-family:inherit;}
 .rc-sub{font-size:12px;color:var(--ink-4);margin-top:3px;}
 .rc-tags{display:flex;flex-wrap:wrap;gap:8px;}
 .rc-tag{background:var(--green-bg);border:1px solid var(--green-border);color:var(--forest-light);font-size:12.5px;font-weight:600;padding:5px 13px;border-radius:9999px;}
-.rc-tag.hi{background:var(--green);color:#fff;border-color:var(--green);font-weight:800;}
+.rc-tag.hi{background:var(--green-bg);border:1px solid var(--green-border);color:var(--forest-light);font-weight:600;}
 
 /* VOICES */
 .voices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px;}
@@ -503,30 +501,8 @@ button{font-family:inherit;}
           電話で問い合わせる
         </a>
       </div>
-    </div>
-
-    <div class="hero-card">
-      <div class="hc-head">Bースタディの特長</div>
-      <div class="hc-grid">
-        <div class="hc-item">
-          <div class="hc-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,.9)" stroke-width="2"/><path d="M12 6v6l4 2" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round"/></svg></div>
-          <div class="hc-num">年中無休</div><div class="hc-lbl">365日通塾可能</div>
-        </div>
-        <div class="hc-item">
-          <div class="hc-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="rgba(255,255,255,.9)" stroke-width="2"/><path d="M8 2v4M16 2v4M3 10h18" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round"/></svg></div>
-          <div class="hc-num">80分/コマ</div><div class="hc-lbl">充実の授業時間</div>
-        </div>
-        <div class="hc-item">
-          <div class="hc-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="rgba(255,255,255,.9)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,.9)" stroke-width="2"/></svg></div>
-          <div class="hc-num">振替OK</div><div class="hc-lbl">柔軟スケジュール</div>
-        </div>
-        <div class="hc-item">
-          <div class="hc-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="hc-num">全教科</div><div class="hc-lbl">小1〜高3対応</div>
-        </div>
-      </div>
-      <div class="hero-countdown">
-        <div class="hcd-title">早期申込特典 締切まで</div>
+      <div class="hero-cd-bar">
+        <div class="hero-cd-label">早期申込特典 締切まで</div>
         <div class="hcd-units">
           <div class="hcd-unit"><span class="hcd-n" id="cd-d">--</span><div class="hcd-l">DAY</div></div>
           <div class="hcd-sep">:</div>
@@ -732,7 +708,9 @@ button{font-family:inherit;}
       </div>
     </div>
     <div class="reveal">
-      <div class="tt-wrap">
+      <div class="tt-scroll-outer">
+      <div class="tt-scroll-arrow">← 左右にスクロールして全曜日を確認できます →</div>
+      <div class="tt-wrap" id="tt-wrap">
         <table class="tt-table">
           <thead>
             <tr><th>コマ</th><th>時間帯</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
@@ -749,8 +727,8 @@ button{font-family:inherit;}
           </tbody>
         </table>
       </div>
-      <p class="tt-hint">← 左右にスクロールできます →</p>
-      <p style="text-align:center;font-size:12px;color:rgba(255,255,255,.45);margin-top:14px;">🌞 黄色ハイライト行は夏期講習期間中（7/1〜8/31）に追加される時間帯です</p>
+      </div>
+      <p style="text-align:center;font-size:12px;color:#a7d8b8;margin-top:12px;">🌞 背景色ハイライト行は夏期講習期間中（7/1〜8/31）に追加される時間帯です</p>
     </div>
   </div>
 </section>
