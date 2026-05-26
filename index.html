@@ -190,9 +190,9 @@ button{font-family:inherit;}
 .tt-table{border-collapse:collapse;width:100%;min-width:680px;font-size:13px;}
 .tt-table thead th{background:#1a4a2e;padding:13px 14px;text-align:center;font-weight:800;color:#fff;border:1px solid #2d6b43;white-space:nowrap;}
 .tt-table thead th:nth-child(2){text-align:left;min-width:140px;}
-.tt-table tbody td{padding:10px 14px;text-align:center;border:1px solid #2d6b43;color:#e2f5e9;white-space:nowrap;background:#0d3b22;}
+.tt-table tbody td{padding:10px 14px;text-align:center;border:1px solid #2d6b43;color:#fff;white-space:nowrap;background:#0d3b22;}
 .tt-table tbody td:first-child{background:#155d36;font-weight:800;color:#fff;}
-.tt-table tbody td:nth-child(2){text-align:left;font-size:12px;color:#a7d8b8;}
+.tt-table tbody td:nth-child(2){text-align:left;font-size:12px;color:rgba(255,255,255,.8);}
 .tt-table tbody tr:nth-child(even) td{background:#0f4228;}
 .tt-table tbody tr:nth-child(even) td:first-child{background:#155d36;}
 .tt-summer td{background:#1e3d10 !important;}
@@ -260,7 +260,8 @@ button{font-family:inherit;}
 .voice-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);}
 .voice-card::before{content:'"';position:absolute;top:-5px;left:18px;font-size:90px;color:var(--green-mid);line-height:1;font-family:Georgia,serif;user-select:none;}
 .voice-stars{display:flex;gap:3px;margin-bottom:12px;}
-.voice-text{font-size:14px;color:var(--ink-2);line-height:1.9;margin-bottom:22px;padding-top:30px;}
+.voice-quote{font-size:14px;font-weight:800;color:var(--green);line-height:1.6;margin-bottom:10px;padding-top:30px;}
+.voice-text{font-size:14px;color:var(--ink-2);line-height:1.9;margin-bottom:22px;}
 .voice-meta{display:flex;align-items:center;gap:12px;}
 .voice-avatar{width:44px;height:44px;border-radius:50%;background:var(--grad-green);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .voice-name{font-size:13.5px;font-weight:800;color:var(--ink);}
@@ -414,7 +415,7 @@ button{font-family:inherit;}
   </a>
   <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-primary hd-cta">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    教室見学・体験申し込み
+    お申込みはこちら
   </a>
 </header>
 
@@ -532,8 +533,8 @@ button{font-family:inherit;}
         <div class="stat-lbl">充実の1コマ授業時間</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num" data-target="8">0<span class="stat-unit">コマ</span></div>
-        <div class="stat-lbl">1日最大受講コマ数</div>
+        <div class="stat-num" data-target="3">0<span class="stat-unit">名</span></div>
+        <div class="stat-lbl">最大指導人数（同時）</div>
       </div>
       <div class="stat-item">
         <div class="stat-num" data-target="30">0<span class="stat-unit">回</span></div>
@@ -569,7 +570,7 @@ button{font-family:inherit;}
         <ul class="check-list">
           <li class="check-item">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>小学1年生〜高校3年生まで全学年・全教科対応</span>
+            <span>小学1年生〜既卒生まで全学年・全教科対応</span>
           </li>
           <li class="check-item">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -586,7 +587,7 @@ button{font-family:inherit;}
         </ul>
         <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-primary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          教室見学・体験申し込み
+          お申込みはこちら
         </a>
       </div>
     </div>
@@ -688,19 +689,9 @@ button{font-family:inherit;}
     <div class="tc">
       <div class="eyebrow tt-eye">TIMETABLE</div>
       <h2 class="sec-title" style="color:#fff;">授業時間割</h2>
-      <p class="sec-lead" style="color:rgba(255,255,255,.75);margin:0 auto;">1コマ80分。1日最大8コマ受講可能です。</p>
+      <p class="sec-lead" style="color:rgba(255,255,255,.75);margin:0 auto;">1コマ80分。最大8コマ受講可能です。</p>
     </div>
     <div class="tt-overview">
-      <div class="tt-card reveal">
-        <div class="tt-card-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" stroke="#f59e0b" stroke-width="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" stroke="#f59e0b" stroke-width="2"/></svg></div>
-        <div class="tt-card-lbl">平日（月〜金）</div>
-        <div class="tt-card-time">16:00〜22:00</div>
-      </div>
-      <div class="tt-card reveal d2">
-        <div class="tt-card-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="#f59e0b" stroke-width="2"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="tt-card-lbl">土日祝</div>
-        <div class="tt-card-time">10:00〜22:00</div>
-      </div>
       <div class="tt-card reveal d3">
         <div class="tt-card-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#f59e0b" stroke-width="2" stroke-linejoin="round"/></svg></div>
         <div class="tt-card-lbl">夏期講習期間（7/1〜8/31）</div>
@@ -766,7 +757,7 @@ button{font-family:inherit;}
         </div>
       </div>
       <div class="tab-panel" id="tp-1">
-        <div class="course-tags"><span class="course-tag">対象：高校1年生〜高校3年生</span></div>
+        <div class="course-tags"><span class="course-tag">対象：高校1年生〜既卒生</span></div>
         <div class="course-includes"><strong>含まれるもの：</strong>自習室使い放題 ＋ スポット指導アプリ使い放題（授業回数なし）</div>
         <div class="self-price">
           <div class="sp-lbl">毎日利用プラン</div>
@@ -871,10 +862,10 @@ button{font-family:inherit;}
           <div><div class="rc-title">大学受験【私立】</div><div class="rc-sub">有名私立大学への合格実績</div></div>
         </div>
         <div class="rc-tags">
-          <span class="rc-tag hi">同志社大学（文）</span><span class="rc-tag">立命館大学（法・他）</span>
-          <span class="rc-tag">関西大学（法・他）</span><span class="rc-tag">関西学院大学（文）</span>
-          <span class="rc-tag">甲南大学（マネジメント創造）</span><span class="rc-tag">京都産業大学（経済・他）</span>
-          <span class="rc-tag">龍谷大学（経済・他）</span><span class="rc-tag">近畿大学（農）</span>
+          <span class="rc-tag hi">同志社大学（政策）</span><span class="rc-tag">立命館大学（法・経済）</span>
+          <span class="rc-tag">関西大学（法・文）</span><span class="rc-tag">関西学院大学（文）</span>
+          <span class="rc-tag">甲南大学（マネジメント創造）</span><span class="rc-tag">京都産業大学（経済・法・他）</span>
+          <span class="rc-tag">龍谷大学（経済・他）</span>
           <span class="rc-tag">神戸学院大学（GC）</span><span class="rc-tag">摂南大学（建築）</span>
           <span class="rc-tag">神戸女子大学（文）</span><span class="rc-tag">就実大学（教育）</span>
           <span class="rc-tag">甲南女子大学（文）</span><span class="rc-tag">神戸松蔭大学（文）</span>
@@ -920,10 +911,11 @@ button{font-family:inherit;}
           <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
         </div>
-        <p class="voice-text">苦手だった数学を集中的に対策してもらい、志望校に合格できました。先生が丁寧に質問に答えてくれるので、授業外でも自習室でどんどん進められました。本当に感謝しています。</p>
+        <p class="voice-quote">「自分のスタイルに合っていて、とても勉強しやすい環境でした」</p>
+        <p class="voice-text">自習室使い放題のコースが、自分の勉強スタイルに合っていると思って選びました。自習環境が充実していて、夏休みは10〜12時間勉強。『ミスノート』というオリジナルノート作成法は、受験前にはお守り代わりにもなりました。</p>
         <div class="voice-meta">
           <div class="voice-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#fff" stroke-width="2"/></svg></div>
-          <div><div class="voice-name">K.Mさん</div><div class="voice-grade">倉吉東高校 合格</div></div>
+          <div><div class="voice-name">M.Sさん</div><div class="voice-grade">大阪大学 医学部 合格 ／ 倉吉東高校</div></div>
         </div>
       </div>
       <div class="voice-card reveal d2">
@@ -934,10 +926,11 @@ button{font-family:inherit;}
           <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
         </div>
-        <p class="voice-text">自分のペースで学べる環境が最高でした。コーチングで目標の立て方から教えてもらい、毎日の勉強習慣が身につきました。大学受験でも引き続きお世話になっています。</p>
+        <p class="voice-quote">「数学の記述力がかなりついたように思います」</p>
+        <p class="voice-text">数学の個別指導で、先生から記述のやり方をレクチャーしてもらったり、丁寧に採点してもらえたので、記述力がかなりついたように思います。静かな環境で集中して勉強に取り組めました。</p>
         <div class="voice-meta">
           <div class="voice-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#fff" stroke-width="2"/></svg></div>
-          <div><div class="voice-name">S.Tさん</div><div class="voice-grade">岡山大学（教育） 合格</div></div>
+          <div><div class="voice-name">H.Rさん</div><div class="voice-grade">新潟大学 医学部 合格 ／ 倉吉東高校</div></div>
         </div>
       </div>
       <div class="voice-card reveal d3">
@@ -948,10 +941,11 @@ button{font-family:inherit;}
           <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
           <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f59e0b"/></svg>
         </div>
-        <p class="voice-text">夏期講習だけのつもりでしたが、先生の熱心な指導に惹かれてそのまま通い続けました。参考書も自由に使えるし、自習室で勉強仲間もできて、充実した毎日でした。</p>
+        <p class="voice-quote">「直前に一気に伸びて、力がついた感覚がありました」</p>
+        <p class="voice-text">静かな環境に加え、周りにも受験生がいたので良い刺激になりました。参考書もたくさんあり、面談で勉強のやり方をレクチャーしていただいたのがとても良かったです。必要な参考書も相談すればコピーしてもらえるので、直前に一気に伸びました。</p>
         <div class="voice-meta">
           <div class="voice-avatar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#fff" stroke-width="2"/></svg></div>
-          <div><div class="voice-name">A.Nさん</div><div class="voice-grade">同志社大学 合格</div></div>
+          <div><div class="voice-name">K.Sさん</div><div class="voice-grade">神戸大学 文学部 合格 ／ 鳥取西高校</div></div>
         </div>
       </div>
     </div>
@@ -968,7 +962,7 @@ button{font-family:inherit;}
     <p class="promise-body">あなたの可能性を最大限に引き出すために。<br>一人ひとりに寄り添い、夢への道を一緒に歩みます。</p>
     <a href="https://manabiya-bstudy.netlify.app/" class="btn-gold-lg">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      教室見学・体験申し込み
+      お申込みはこちら
     </a>
   </div>
 </section>
@@ -1024,7 +1018,7 @@ button{font-family:inherit;}
     </div>
     <div class="principal-grid">
       <div class="principal-photo reveal-l">
-        <img src="assets/principal.jpg" alt="橋本英武 塾長">
+        <img src="assets/principal2.png" alt="橋本英武 塾長">
       </div>
       <div class="reveal-r">
         <div class="principal-name">橋本 英武</div>
@@ -1118,7 +1112,7 @@ button{font-family:inherit;}
           <div class="faq-q-text">どの教科でも対応していますか？</div>
           <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="faq-a">はい、国語・算数・数学・英語・理科・社会など全教科に対応しています。小学1年生から高校3年生まで幅広く対応しておりますので、お気軽にご相談ください。</div>
+        <div class="faq-a">はい、国語・算数・数学・英語・理科・社会など全教科に対応しています。小学1年生から既卒生まで幅広く対応しておりますので、お気軽にご相談ください。</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
@@ -1141,7 +1135,7 @@ button{font-family:inherit;}
     <div class="contact-tel-note">電話受付：月〜金 16:00〜21:00</div>
     <a href="https://manabiya-bstudy.netlify.app/" class="btn-gold-lg">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      教室見学・体験申し込み
+      お申込みはこちら
     </a>
     <div class="contact-addr">〒682-0812 鳥取県倉吉市海田西町2丁目95<br>manabiya.b-study@outlook.jp</div>
   </div>
@@ -1164,7 +1158,7 @@ button{font-family:inherit;}
         </div>
       </div>
       <div>
-        <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-gold" style="font-size:13px;">教室見学・体験申し込み</a>
+        <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-gold" style="font-size:13px;">お申込みはこちら</a>
       </div>
     </div>
     <div class="footer-bottom">© 2026 MANABIYA Bースタディ. All rights reserved.</div>
@@ -1173,7 +1167,7 @@ button{font-family:inherit;}
 
 <!-- MOBILE CTA -->
 <div class="mob-cta">
-  <a href="https://manabiya-bstudy.netlify.app/">教室見学・体験申し込みへ →</a>
+  <a href="https://manabiya-bstudy.netlify.app/">お申込みはこちら →</a>
 </div>
 
 <script>
