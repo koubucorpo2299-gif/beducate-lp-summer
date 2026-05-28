@@ -82,11 +82,6 @@ button{font-family:inherit;}
 .hero-overlay-b{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(0,0,0,.5) 0%,transparent 45%);}
 .hero-dot-pattern{position:absolute;inset:0;z-index:1;opacity:.06;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:32px 32px;}
 
-.hero-sun{position:absolute;right:-80px;top:-80px;width:540px;height:540px;z-index:2;pointer-events:none;}
-.hero-sun-glow{position:absolute;inset:60px;background:radial-gradient(circle,rgba(245,158,11,.22) 0%,transparent 70%);animation:sunPulse 4s ease-in-out infinite;}
-@keyframes sunPulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
-.hero-sun-rays{animation:sunSpin 44s linear infinite;transform-origin:50% 50%;}
-@keyframes sunSpin{to{transform:rotate(360deg)}}
 
 .hero-float{position:absolute;z-index:4;background:rgba(255,255,255,.96);border-radius:18px;padding:13px 20px;box-shadow:0 14px 44px rgba(0,0,0,.22);backdrop-filter:blur(12px);animation:heroFloat 7s ease-in-out infinite;}
 .hero-float:nth-child(1){bottom:28%;left:4%;animation-delay:0s;}
@@ -181,25 +176,34 @@ button{font-family:inherit;}
 .tt-card-lbl{font-size:12px;color:#a7d8b8;font-weight:700;margin-bottom:6px;}
 .tt-card-time{font-size:clamp(15px,1.8vw,20px);font-weight:900;color:#fff;}
 .tt-scroll-outer{position:relative;}
-.tt-scroll-arrow{display:flex;align-items:center;justify-content:center;gap:8px;background:#1a4a2e;border-radius:10px;padding:8px 16px;margin-bottom:10px;color:#a7d8b8;font-size:12px;font-weight:700;letter-spacing:.05em;}
-.tt-wrap{overflow-x:auto;border-radius:16px;scrollbar-width:auto;scrollbar-color:#4ade80 #1a4a2e;cursor:grab;}
+.tt-scroll-arrow{display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,.15);border-radius:10px;padding:8px 16px;margin-bottom:10px;color:#fff;font-size:12px;font-weight:700;letter-spacing:.05em;border:1px solid rgba(255,255,255,.25);}
+.tt-wrap{overflow-x:auto;border-radius:16px;scrollbar-width:auto;scrollbar-color:#22c55e #e5e7eb;cursor:grab;box-shadow:0 4px 20px rgba(0,0,0,.18);}
 .tt-wrap:active{cursor:grabbing;}
 .tt-wrap::-webkit-scrollbar{height:10px;}
-.tt-wrap::-webkit-scrollbar-track{background:#1a4a2e;border-radius:5px;}
-.tt-wrap::-webkit-scrollbar-thumb{background:#22c55e;border-radius:5px;}
+.tt-wrap::-webkit-scrollbar-track{background:#e5e7eb;border-radius:5px;}
+.tt-wrap::-webkit-scrollbar-thumb{background:#16a34a;border-radius:5px;}
 .tt-table{border-collapse:collapse;width:100%;min-width:680px;font-size:13px;}
 .tt-table thead th{background:#1a4a2e;padding:13px 14px;text-align:center;font-weight:800;color:#fff;border:1px solid #2d6b43;white-space:nowrap;}
 .tt-table thead th:nth-child(2){text-align:left;min-width:140px;}
-.tt-table tbody td{padding:10px 14px;text-align:center;border:1px solid #2d6b43;color:#fff;white-space:nowrap;background:#0d3b22;}
-.tt-table tbody td:first-child{background:#155d36;font-weight:800;color:#fff;}
-.tt-table tbody td:nth-child(2){text-align:left;font-size:12px;color:rgba(255,255,255,.8);}
-.tt-table tbody tr:nth-child(even) td{background:#0f4228;}
-.tt-table tbody tr:nth-child(even) td:first-child{background:#155d36;}
-.tt-summer td{background:#1e3d10 !important;}
-.tt-summer td:first-child{background:#2d5a18 !important;}
-.tt-slot{display:inline-block;padding:5px 14px;border-radius:6px;font-size:12px;font-weight:800;}
+.tt-table tbody td{padding:11px 14px;text-align:center;border:1px solid #d1fae5;color:#1f2937;white-space:nowrap;background:#fff;}
+.tt-table tbody td:first-child{background:#1a4a2e;font-weight:800;color:#fff;border-color:#2d6b43;}
+.tt-table tbody td:nth-child(2){text-align:left;font-size:12px;color:#374151;}
+.tt-table tbody tr:nth-child(even) td{background:#f0fdf4;}
+.tt-table tbody tr:nth-child(even) td:first-child{background:#1a4a2e;}
+.tt-summer td{background:#dcfce7 !important;color:#14532d !important;font-weight:700;}
+.tt-summer td:first-child{background:#166534 !important;color:#fff !important;}
+.tt-slot{display:inline-block;padding:4px 14px;border-radius:6px;font-size:13px;font-weight:800;}
 .tt-slot.open{background:#16a34a;color:#fff;}
 .tt-hint{display:none;text-align:center;font-size:12px;color:#a7d8b8;margin-top:8px;padding:8px;background:#1a4a2e;border-radius:8px;}
+
+/* COURSE FEATURES */
+.course-feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;}
+.course-feat-grid--4{grid-template-columns:repeat(4,1fr);}
+.course-feat-item{background:var(--green-bg);border:1.5px solid var(--green-border);border-radius:16px;padding:20px 16px;text-align:center;}
+.course-feat-ico{width:52px;height:52px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:0 2px 8px rgba(22,163,74,.12);}
+.course-feat-ttl{font-size:13px;font-weight:800;color:var(--forest-mid);margin-bottom:6px;line-height:1.4;}
+.course-feat-desc{font-size:12px;color:var(--ink-3);line-height:1.6;}
+@media(max-width:640px){.course-feat-grid,.course-feat-grid--4{grid-template-columns:repeat(2,1fr);}}
 
 /* COURSES */
 .tab-nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0;}
@@ -227,8 +231,30 @@ button{font-family:inherit;}
 .hybrid-box::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--grad-green);}
 .hybrid-h{font-size:16px;font-weight:900;color:var(--forest-mid);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
 .hybrid-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.hybrid-list li{display:flex;align-items:flex-start;gap:11px;font-size:14px;color:var(--ink-3);}
-.hybrid-list li svg{flex-shrink:0;margin-top:2px;}
+/* RECOMMEND */
+.recommend-sec{margin-top:48px;}
+.sessions-sec{margin-top:40px;}
+.recommend-title{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:900;color:var(--forest-mid);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--green-border);}
+.recommend-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.recommend-card{background:#fff;border:1.5px solid var(--green-border);border-radius:20px;padding:22px 18px;position:relative;}
+.recommend-card--new{border-color:#f59e0b;background:#fffbeb;}
+.recommend-num{width:32px;height:32px;background:var(--green);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;margin-bottom:10px;}
+.recommend-num-new{display:inline-block;background:#f59e0b;color:#fff;font-size:11px;font-weight:900;padding:3px 10px;border-radius:9999px;margin-bottom:10px;}
+.recommend-name{font-size:14px;font-weight:900;color:var(--forest-mid);margin-bottom:6px;}
+.recommend-sub{font-size:12px;color:var(--ink-3);line-height:1.6;margin-bottom:14px;}
+.recommend-list{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.recommend-list li{font-size:12px;color:var(--ink-2);padding-left:16px;position:relative;line-height:1.5;}
+.recommend-list li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:900;font-size:11px;}
+.sessions-wrap{overflow-x:auto;border-radius:14px;border:1.5px solid var(--green-border);}
+.sessions-table{width:100%;border-collapse:collapse;font-size:14px;min-width:400px;}
+.sessions-table thead th{background:var(--green);color:#fff;padding:12px 18px;font-weight:800;text-align:left;}
+.sessions-table thead th:nth-child(2){text-align:center;}
+.sessions-table tbody td{padding:11px 18px;border-bottom:1px solid var(--green-border);color:var(--ink);font-weight:600;}
+.sessions-table tbody td.sc-num{text-align:center;color:var(--green);font-weight:900;font-size:15px;}
+.sessions-table tbody tr:nth-child(even) td{background:var(--green-bg);}
+.sessions-table tbody tr:last-child td{border-bottom:none;}
+@media(max-width:960px){.recommend-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.recommend-grid{grid-template-columns:1fr 1fr;}.sessions-table{font-size:13px;}}
 
 /* CAMPAIGN */
 .camp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;}
@@ -431,32 +457,6 @@ button{font-family:inherit;}
   <div class="hero-overlay-b"></div>
   <div class="hero-dot-pattern"></div>
 
-  <!-- Sun decoration -->
-  <div class="hero-sun" aria-hidden="true">
-    <div class="hero-sun-glow"></div>
-    <svg viewBox="0 0 540 540" fill="none" style="position:absolute;inset:0;width:100%;height:100%;">
-      <g class="hero-sun-rays">
-        <line x1="270" y1="14" x2="270" y2="92" stroke="#f59e0b" stroke-width="7" stroke-linecap="round" opacity=".7"/>
-        <line x1="270" y1="448" x2="270" y2="526" stroke="#f59e0b" stroke-width="7" stroke-linecap="round" opacity=".7"/>
-        <line x1="14" y1="270" x2="92" y2="270" stroke="#f59e0b" stroke-width="7" stroke-linecap="round" opacity=".7"/>
-        <line x1="448" y1="270" x2="526" y2="270" stroke="#f59e0b" stroke-width="7" stroke-linecap="round" opacity=".7"/>
-        <line x1="72" y1="72" x2="130" y2="130" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" opacity=".5"/>
-        <line x1="410" y1="410" x2="468" y2="468" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" opacity=".5"/>
-        <line x1="468" y1="72" x2="410" y2="130" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" opacity=".5"/>
-        <line x1="130" y1="410" x2="72" y2="468" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" opacity=".5"/>
-        <line x1="162" y1="22" x2="188" y2="100" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
-        <line x1="378" y1="440" x2="352" y2="518" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
-        <line x1="518" y1="162" x2="440" y2="188" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
-        <line x1="100" y1="378" x2="22" y2="404" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
-        <line x1="22" y1="162" x2="100" y2="188" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
-        <line x1="440" y1="352" x2="518" y2="378" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
-        <line x1="378" y1="22" x2="352" y2="100" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
-        <line x1="162" y1="440" x2="188" y2="518" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity=".4"/>
-      </g>
-      <circle cx="270" cy="270" r="88" fill="#f59e0b" opacity=".16"/>
-      <circle cx="270" cy="270" r="62" fill="#f59e0b" opacity=".14"/>
-    </svg>
-  </div>
 
   <!-- Floating badges -->
   <div class="hero-float">
@@ -695,7 +695,7 @@ button{font-family:inherit;}
       <div class="tt-card reveal d3">
         <div class="tt-card-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#f59e0b" stroke-width="2" stroke-linejoin="round"/></svg></div>
         <div class="tt-card-lbl">夏期講習期間（7/1〜8/31）</div>
-        <div class="tt-card-time">毎日 10:00〜22:00</div>
+        <div class="tt-card-time">毎日 9:00〜22:00</div>
       </div>
     </div>
     <div class="reveal">
@@ -719,7 +719,7 @@ button{font-family:inherit;}
         </table>
       </div>
       </div>
-      <p style="text-align:center;font-size:12px;color:#a7d8b8;margin-top:12px;">🌞 背景色ハイライト行は夏期講習期間中（7/1〜8/31）に追加される時間帯です</p>
+      <p style="text-align:center;font-size:12px;color:rgba(255,255,255,.8);margin-top:12px;">🌞 背景色ハイライト行は夏期講習期間中（7/1〜8/31）に追加される時間帯です</p>
     </div>
   </div>
 </section>
@@ -739,6 +739,23 @@ button{font-family:inherit;}
         <button class="tab-btn" onclick="switchTab(2)">コーチング</button>
       </div>
       <div class="tab-panel active" id="tp-0">
+        <div class="course-feat-grid">
+          <div class="course-feat-item">
+            <div class="course-feat-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#16a34a" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="course-feat-ttl">完全個別指導</div>
+            <div class="course-feat-desc">講師が隣で丁寧に指導します。</div>
+          </div>
+          <div class="course-feat-item">
+            <div class="course-feat-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="course-feat-ttl">オーダーメイド学習</div>
+            <div class="course-feat-desc">目標や課題に合わせた学習プランを作成。</div>
+          </div>
+          <div class="course-feat-item">
+            <div class="course-feat-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="course-feat-ttl">成績アップ・受験対策</div>
+            <div class="course-feat-desc">定期テスト対策から受験まで徹底サポート。</div>
+          </div>
+        </div>
         <div class="course-tags"><span class="course-tag">対象：小学1年生〜高校3年生</span></div>
         <div class="course-includes"><strong>含まれるもの：</strong>個別指導 4回〜15回 ＋ 自習室使い放題 ＋ スポット指導アプリ使い放題</div>
         <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:14px 18px;margin-bottom:20px;font-size:14px;color:#92400e;font-weight:600;line-height:1.7;">
@@ -757,6 +774,23 @@ button{font-family:inherit;}
         </div>
       </div>
       <div class="tab-panel" id="tp-1">
+        <div class="course-feat-grid">
+          <div class="course-feat-item">
+            <div class="course-feat-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#16a34a" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="course-feat-ttl">自習室使い放題</div>
+            <div class="course-feat-desc">静かで集中できる環境をいつでも利用可能。</div>
+          </div>
+          <div class="course-feat-item">
+            <div class="course-feat-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="#16a34a" stroke-width="2"/><path d="M12 18h.01" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="course-feat-ttl">オンラインスポット指導</div>
+            <div class="course-feat-desc">スポット指導アプリが時間無制限で利用できます。</div>
+          </div>
+          <div class="course-feat-item">
+            <div class="course-feat-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="course-feat-ttl">自分のペースで学習</div>
+            <div class="course-feat-desc">計画を立て、自分のペースで学習を進められます。</div>
+          </div>
+        </div>
         <div class="course-tags"><span class="course-tag">対象：高校1年生〜既卒生</span></div>
         <div class="course-includes"><strong>含まれるもの：</strong>自習室使い放題 ＋ スポット指導アプリ使い放題（授業回数なし）</div>
         <div class="self-price">
@@ -767,6 +801,28 @@ button{font-family:inherit;}
         </div>
       </div>
       <div class="tab-panel" id="tp-2">
+        <div class="course-feat-grid course-feat-grid--4">
+          <div class="course-feat-item">
+            <div class="course-feat-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="course-feat-ttl">目標設定・計画立案</div>
+            <div class="course-feat-desc">一人ひとりに合わせた学習計画を作成します。</div>
+          </div>
+          <div class="course-feat-item">
+            <div class="course-feat-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="course-feat-ttl">定期面談・進捗管理</div>
+            <div class="course-feat-desc">定期的な面談で進捗を確認し、軌道修正を行います。</div>
+          </div>
+          <div class="course-feat-item">
+            <div class="course-feat-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="course-feat-ttl">学習習慣の定着</div>
+            <div class="course-feat-desc">継続できる学習習慣を身につけます。</div>
+          </div>
+          <div class="course-feat-item">
+            <div class="course-feat-ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#16a34a" stroke-width="2" stroke-linejoin="round"/></svg></div>
+            <div class="course-feat-ttl">目標達成サポート</div>
+            <div class="course-feat-desc">志望校合格や成績向上に向けて全力でサポート。</div>
+          </div>
+        </div>
         <div class="course-tags"><span class="course-tag">対象：中学1年生〜高校3年生・既卒生</span></div>
         <div class="course-includes"><strong>含まれるもの：</strong>コーチング 4回〜15回 ＋ 自習室使い放題 ＋ スポット指導アプリ使い放題</div>
         <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:14px 18px;margin-bottom:20px;font-size:14px;color:#92400e;font-weight:600;line-height:1.7;">
@@ -795,6 +851,83 @@ button{font-family:inherit;}
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>例：プライベートレッスン8回＋コーチング4回＝合計12回　など</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M7 12l3.5 3.5L17 8.5" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>もちろん1つのコースのみで全回数を受講することも可能</li>
         </ul>
+      </div>
+
+      <!-- こんな方におすすめ -->
+      <div class="recommend-sec reveal">
+        <div class="recommend-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          こんな方におすすめ
+        </div>
+        <div class="recommend-grid">
+          <div class="recommend-card">
+            <div class="recommend-num">1</div>
+            <div class="recommend-name">プライベートレッスン</div>
+            <div class="recommend-sub">先生による個別指導で、<br>確実に力をつけたい方に</div>
+            <ul class="recommend-list">
+              <li>苦手科目を集中的に克服したい</li>
+              <li>テストや受験対策を徹底したい</li>
+              <li>一人では理解が進まない</li>
+              <li>丁寧に指導を受けたい</li>
+            </ul>
+          </div>
+          <div class="recommend-card">
+            <div class="recommend-num">2</div>
+            <div class="recommend-name">セルフラーニング</div>
+            <div class="recommend-sub">自分のペースで学習を<br>進めたい方に</div>
+            <ul class="recommend-list">
+              <li>自由な時間に自分のペースで学びたい</li>
+              <li>自習環境を整えて集中したい</li>
+              <li>質問できる環境もほしい</li>
+              <li>定期テストや受験に備えたい</li>
+            </ul>
+          </div>
+          <div class="recommend-card">
+            <div class="recommend-num">3</div>
+            <div class="recommend-name">コーチング</div>
+            <div class="recommend-sub">学習計画を立て、<br>目標達成を目指したい方に</div>
+            <ul class="recommend-list">
+              <li>何から始めればよいかわからない</li>
+              <li>勉強のやり方を見直したい</li>
+              <li>モチベーションを維持したい</li>
+              <li>受験に向けて計画的に進めたい</li>
+            </ul>
+          </div>
+          <div class="recommend-card recommend-card--new">
+            <div class="recommend-num-new">NEW</div>
+            <div class="recommend-name">ハイブリッド受講</div>
+            <div class="recommend-sub">プライベートレッスン＋<br>コーチングを組み合わせたい方に</div>
+            <ul class="recommend-list">
+              <li>4回〜最大30回まで受講可能</li>
+              <li>各コース好きな回数でカスタマイズ可能</li>
+              <li>16回以降単価：中学生¥3,500 / 高校生以上¥4,000</li>
+              <li>対象：中学1年生〜高校3年生まで</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 受講回数の目安 -->
+      <div class="sessions-sec reveal">
+        <div class="recommend-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#16a34a" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/></svg>
+          受講回数の目安一覧
+        </div>
+        <div class="sessions-wrap">
+          <table class="sessions-table">
+            <thead><tr><th>プラン</th><th>目安回数</th><th>こんな方に</th></tr></thead>
+            <tbody>
+              <tr><td>スタートアップ</td><td class="sc-num">4回</td><td>塾が初めて・お試し</td></tr>
+              <tr><td>苦手集中克服</td><td class="sc-num">6回</td><td>苦手分野あり・弱点克服</td></tr>
+              <tr><td>基礎完成</td><td class="sc-num">8回</td><td>基礎固め・内申点アップ</td></tr>
+              <tr><td>実践・応用強化</td><td class="sc-num">10回</td><td>応用・演習・先取</td></tr>
+              <tr><td>入試準備</td><td class="sc-num">12回</td><td>受験対策スタート</td></tr>
+              <tr><td>弱点ゼロ</td><td class="sc-num">14回</td><td>全教科の課題克服</td></tr>
+              <tr><td>逆転合格</td><td class="sc-num">16回</td><td>難関校志望・本気で変わりたい</td></tr>
+              <tr><td>勉強習慣</td><td class="sc-num">自習室のみ</td><td>勉強習慣づくり・場所が欲しい</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
