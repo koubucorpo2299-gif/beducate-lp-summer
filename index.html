@@ -227,7 +227,9 @@ button{font-family:inherit;}
 .hd-brand{display:flex;align-items:center;gap:11px;min-width:0;flex-shrink:1;}
 .hd-logo{width:36px;height:36px;border-radius:10px;object-fit:contain;flex-shrink:0;}
 .hd-name{font-size:12.5px;font-weight:900;color:var(--forest-mid);line-height:1.3;white-space:nowrap;}
-.hd-cta{padding:9px 20px;font-size:12.5px;flex-shrink:0;}
+.hd-btns{display:flex;gap:8px;flex-shrink:0;}
+.hd-cta{padding:9px 18px;font-size:12.5px;flex-shrink:0;}
+@media(max-width:480px){.hd-btns .hd-cta:first-child{display:none;}}
 
 /* HERO */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--forest);overflow:hidden;padding-top:64px;}
@@ -530,8 +532,23 @@ button{font-family:inherit;}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:20px;text-align:center;font-size:12px;}
 
 /* MOBILE CTA */
-.mob-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:600;padding:12px 16px;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);box-shadow:0 -3px 24px rgba(0,0,0,.12);}
-.mob-cta a{display:block;background:var(--grad-green);color:#fff;text-align:center;padding:14px;border-radius:12px;font-size:15px;font-weight:900;box-shadow:var(--shadow-green);}
+.mob-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:600;padding:10px 12px;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);box-shadow:0 -3px 24px rgba(0,0,0,.12);}
+.mob-cta-inner{display:flex;gap:8px;}
+.mob-cta-inner a{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;border-radius:12px;font-size:13px;font-weight:900;text-decoration:none;}
+.mob-cta-inner .mob-apply{background:var(--grad-gold);color:var(--ink);box-shadow:var(--shadow-gold);}
+.mob-cta-inner .mob-line{background:#06C755;color:#fff;box-shadow:0 4px 14px rgba(6,199,85,.4);}
+
+/* LINE BUTTON */
+.btn-line{background:#06C755;color:#fff;padding:15px 32px;font-size:14px;box-shadow:0 8px 30px rgba(6,199,85,.38);}
+.btn-line:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(6,199,85,.52);}
+.btn-line-lg{background:#06C755;color:#fff;padding:20px 40px;font-size:17px;box-shadow:0 12px 40px rgba(6,199,85,.42);border-radius:9999px;display:inline-flex;align-items:center;gap:12px;font-family:inherit;font-weight:900;transition:all var(--t) var(--ease);text-decoration:none;}
+.btn-line-lg:hover{transform:translateY(-4px);box-shadow:0 20px 55px rgba(6,199,85,.52);}
+
+/* CTA PAIR (申込 + LINE 並列) */
+.cta-pair{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;}
+.cta-pair .btn-gold-lg{padding:18px 36px;font-size:16px;}
+.cta-pair .btn-line-lg{padding:18px 36px;font-size:16px;}
+@media(max-width:640px){.cta-pair{flex-direction:column;width:100%;}.cta-pair .btn-gold-lg,.cta-pair .btn-line-lg{width:100%;justify-content:center;padding:16px 24px;font-size:15px;}}
 
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
@@ -596,10 +613,16 @@ button{font-family:inherit;}
     <img src="assets/logo.png" alt="MANABIYA Bースタディ ロゴ" class="hd-logo" width="48" height="48">
     <div class="hd-name">MANABIYA Bースタディ<br>夏期講習専用ページ</div>
   </a>
-  <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-primary hd-cta">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    お申込みはこちら
-  </a>
+  <div class="hd-btns">
+    <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-primary hd-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      お申込みはこちら
+    </a>
+    <a href="https://cb29uhoz.autosns.app/line" class="btn btn-line hd-cta" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21.86 10.48C21.86 5.86 17.28 2.1 11.63 2.1S1.4 5.86 1.4 10.48c0 4.16 3.68 7.65 8.66 8.31.34.07.8.22.91.5.1.26.07.66.03.92l-.15.88c-.04.26-.21 1.03.9.56 1.12-.47 6.02-3.54 8.21-6.07 1.52-1.66 2.9-3.42 2.9-5.1z" fill="#fff"/></svg>
+      LINEで相談
+    </a>
+  </div>
 </header>
 
 <!-- HERO -->
@@ -654,9 +677,9 @@ button{font-family:inherit;}
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           今すぐ申し込む
         </a>
-        <a href="tel:0858271991" class="btn btn-ghost">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.42 2 2 0 0 1 3.62 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          電話で問い合わせる
+        <a href="https://cb29uhoz.autosns.app/line" class="btn btn-line" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21.86 10.48C21.86 5.86 17.28 2.1 11.63 2.1S1.4 5.86 1.4 10.48c0 4.16 3.68 7.65 8.66 8.31.34.07.8.22.91.5.1.26.07.66.03.92l-.15.88c-.04.26-.21 1.03.9.56 1.12-.47 6.02-3.54 8.21-6.07 1.52-1.66 2.9-3.42 2.9-5.1z" fill="#fff"/><path d="M9.4 12.73H7.55a.38.38 0 0 1-.38-.38V8.88c0-.21.17-.38.38-.38s.38.17.38.38v3.09H9.4c.21 0 .38.17.38.38s-.17.38-.38.38zM10.58 12.35c0 .21-.17.38-.38.38s-.38-.17-.38-.38V8.88c0-.21.17-.38.38-.38s.38.17.38.38v3.47zM15.14 12.35c0 .17-.11.32-.27.37l-.1.02c-.14 0-.27-.07-.35-.19l-1.79-2.44v2.24c0 .21-.17.38-.38.38s-.38-.17-.38-.38V8.88c0-.17.11-.32.27-.37l.1-.01c.14 0 .27.07.35.19l1.79 2.44V8.88c0-.21.17-.38.38-.38s.38.17.38.38v3.47zM17.2 9.64h-1.27v.88h1.27c.21 0 .38.17.38.38s-.17.38-.38.38h-1.27v.88h1.27c.21 0 .38.17.38.38s-.17.38-.38.38h-1.65a.38.38 0 0 1-.38-.38V8.88c0-.21.17-.38.38-.38h1.65c.21 0 .38.17.38.38s-.17.38-.38.38z" fill="#06C755"/></svg>
+          LINEで相談
         </a>
       </div>
       <div class="hero-cd-bar">
@@ -742,10 +765,16 @@ button{font-family:inherit;}
             <span>夏期講習は入塾金無料（通常¥11,000）</span>
           </li>
         </ul>
-        <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          お申込みはこちら
-        </a>
+        <div class="cta-pair" style="justify-content:flex-start;">
+          <a href="https://manabiya-bstudy.netlify.app/" class="btn-gold-lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            お申込みはこちら
+          </a>
+          <a href="https://cb29uhoz.autosns.app/line" class="btn-line-lg" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21.86 10.48C21.86 5.86 17.28 2.1 11.63 2.1S1.4 5.86 1.4 10.48c0 4.16 3.68 7.65 8.66 8.31.34.07.8.22.91.5.1.26.07.66.03.92l-.15.88c-.04.26-.21 1.03.9.56 1.12-.47 6.02-3.54 8.21-6.07 1.52-1.66 2.9-3.42 2.9-5.1z" fill="#fff"/></svg>
+            LINEで相談
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -1250,10 +1279,16 @@ button{font-family:inherit;}
     <span class="badge badge-white" style="margin-bottom:24px;">OUR PROMISE</span>
     <div class="promise-quote">学びを通して、<em>「自己実現」</em>を追求する。</div>
     <p class="promise-body">あなたの可能性を最大限に引き出すために。<br>一人ひとりに寄り添い、夢への道を一緒に歩みます。</p>
-    <a href="https://manabiya-bstudy.netlify.app/" class="btn-gold-lg">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      お申込みはこちら
-    </a>
+    <div class="cta-pair">
+      <a href="https://manabiya-bstudy.netlify.app/" class="btn-gold-lg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        お申込みはこちら
+      </a>
+      <a href="https://cb29uhoz.autosns.app/line" class="btn-line-lg" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.86 10.48C21.86 5.86 17.28 2.1 11.63 2.1S1.4 5.86 1.4 10.48c0 4.16 3.68 7.65 8.66 8.31.34.07.8.22.91.5.1.26.07.66.03.92l-.15.88c-.04.26-.21 1.03.9.56 1.12-.47 6.02-3.54 8.21-6.07 1.52-1.66 2.9-3.42 2.9-5.1z" fill="#fff"/></svg>
+        LINEで相談
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1423,10 +1458,16 @@ button{font-family:inherit;}
     <p class="contact-lead">まずはお気軽に教室見学・無料体験授業へ。<br>あなたの目標に合ったプランを一緒に考えます。</p>
     <div class="contact-tel"><a href="tel:0858271991">0858-27-1991</a></div>
     <div class="contact-tel-note">電話受付：月〜金 16:00〜21:00</div>
-    <a href="https://manabiya-bstudy.netlify.app/" class="btn-gold-lg">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      お申込みはこちら
-    </a>
+    <div class="cta-pair">
+      <a href="https://manabiya-bstudy.netlify.app/" class="btn-gold-lg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        お申込みはこちら
+      </a>
+      <a href="https://cb29uhoz.autosns.app/line" class="btn-line-lg" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.86 10.48C21.86 5.86 17.28 2.1 11.63 2.1S1.4 5.86 1.4 10.48c0 4.16 3.68 7.65 8.66 8.31.34.07.8.22.91.5.1.26.07.66.03.92l-.15.88c-.04.26-.21 1.03.9.56 1.12-.47 6.02-3.54 8.21-6.07 1.52-1.66 2.9-3.42 2.9-5.1z" fill="#fff"/></svg>
+        LINEで相談
+      </a>
+    </div>
     <div class="contact-addr">〒682-0812 鳥取県倉吉市海田西町2丁目95<br>manabiya.b-study@outlook.jp</div>
   </div>
 </section>
@@ -1448,7 +1489,13 @@ button{font-family:inherit;}
         </div>
       </div>
       <div>
-        <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-gold" style="font-size:13px;">お申込みはこちら</a>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="https://manabiya-bstudy.netlify.app/" class="btn btn-gold" style="font-size:13px;">お申込みはこちら</a>
+          <a href="https://cb29uhoz.autosns.app/line" class="btn btn-line" style="font-size:13px;" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21.86 10.48C21.86 5.86 17.28 2.1 11.63 2.1S1.4 5.86 1.4 10.48c0 4.16 3.68 7.65 8.66 8.31.34.07.8.22.91.5.1.26.07.66.03.92l-.15.88c-.04.26-.21 1.03.9.56 1.12-.47 6.02-3.54 8.21-6.07 1.52-1.66 2.9-3.42 2.9-5.1z" fill="#fff"/></svg>
+            LINEで相談
+          </a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">© 2026 MANABIYA Bースタディ. All rights reserved.</div>
@@ -1457,7 +1504,16 @@ button{font-family:inherit;}
 
 <!-- MOBILE CTA -->
 <div class="mob-cta">
-  <a href="https://manabiya-bstudy.netlify.app/">お申込みはこちら →</a>
+  <div class="mob-cta-inner">
+    <a href="https://manabiya-bstudy.netlify.app/" class="mob-apply">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      お申込みはこちら
+    </a>
+    <a href="https://cb29uhoz.autosns.app/line" class="mob-line" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M21.86 10.48C21.86 5.86 17.28 2.1 11.63 2.1S1.4 5.86 1.4 10.48c0 4.16 3.68 7.65 8.66 8.31.34.07.8.22.91.5.1.26.07.66.03.92l-.15.88c-.04.26-.21 1.03.9.56 1.12-.47 6.02-3.54 8.21-6.07 1.52-1.66 2.9-3.42 2.9-5.1z" fill="#fff"/></svg>
+      LINEで相談
+    </a>
+  </div>
 </div>
 
 <script>
